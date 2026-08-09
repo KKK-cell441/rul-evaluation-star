@@ -28,4 +28,4 @@
 - `results/split_sensitivity_*.json`
 - `results/converged_results_summary.md`
 - `paper/manuscript_revised_v5.pdf/tex`
-- `paper/prevalence_survey.md`
+- Quantitative prevalence survey counts are not part of this version.

@@ -44,11 +44,12 @@ This runs TCN with piecewise labels under random 60/20/20, random 80/10/10, and 
 ## Outputs
 - `results/converged_*.json`: main converged protocol, per-fold and per-seed results.
 - `results/split_sensitivity_*.json`: split-ratio and time-block sensitivity.
-- `supplementary/supplementary_prevalence_survey.pdf`: prevalence survey coding rules and coding sheet draft.
+- Quantitative prevalence survey counts are not part of this version; protocol-level claims are limited to the reproduced experimental family.
 
 ## Status
 The scientific results are final. Before journal submission, the following author-controlled items must be completed:
-- Corresponding email and ORCID.
+- ORCID: 0009-0003-4491-6619; email: 202421270@nefu.edu.cn.
 - Funding statement.
-- Public repository URL and Zenodo DOI.
-- Final full-text verification of all 20 prevalence survey rows.
+- Public repository: https://github.com/KKK-cell441/rul-evaluation-star
+- DOI: https://doi.org/10.5281/zenodo.21861060
+- Prevalence survey counts were removed from the manuscript; no 20-paper coding claim is made.
