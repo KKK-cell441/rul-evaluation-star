@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.aux
+*.log
+*.out
+*.spl
+*.blg
+*.bbl
+manuscript.pdf
+manuscript_revised_v3.pdf
+manuscript_revised_v4.pdf
+manuscript_revised_v5.pdf
+03_RUL_full.txt
+03_RUL_Labeling_revised_v4.docx
+03_RUL_Labeling_revised_v5.docx

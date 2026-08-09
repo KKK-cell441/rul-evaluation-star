@@ -1,0 +1,21 @@
+ID,FirstAuthor,Year,Journal,Title,Piecewise80,RandomSplit,ConstantBaseline,Evidence
+P01,Wang,2019,IEEE Access,Random forest based bearing RUL prediction using multi-scale features,PENDING,PENDING,PENDING,Full-text verification required
+P02,Li,2020,IEEE Transactions on Industrial Informatics,Multiscale CNN with self-attention for bearing RUL prediction,PENDING,PENDING,PENDING,Full-text verification required
+P03,Zhang,2020,Mechanical Systems and Signal Processing,LSTM-based approach for remaining useful life prediction of rolling bearings,PENDING,PENDING,PENDING,Full-text verification required
+P04,Chen,2021,Neurocomputing,GRU with attention mechanism for bearing RUL prediction,PENDING,PENDING,PENDING,Full-text verification required
+P05,Wang,2021,Measurement,CWT-CNN: A hybrid deep learning approach for bearing RUL prediction,PENDING,PENDING,PENDING,Full-text verification required
+P06,Li,2021,IEEE Access,A CNN-LSTM hybrid model for bearing remaining useful life prediction,PENDING,PENDING,PENDING,Full-text verification required
+P07,Mo,2022,IEEE Transactions on Instrumentation and Measurement,Transformer-based approach for machinery remaining useful life prediction,PENDING,PENDING,PENDING,Full-text verification required
+P08,Costa,2022,Reliability Engineering & System Safety,SHAP-based interpretability for RUL prediction of industrial assets,PENDING,PENDING,PENDING,Full-text verification required
+P09,Li,2022,Reliability Engineering & System Safety,Physics-informed neural networks for bearing remaining useful life prediction,PENDING,PENDING,PENDING,Full-text verification required
+P10,AUTHOR_TO_COMPLETE,,,,PENDING,PENDING,PENDING,Full-text verification required
+P11,AUTHOR_TO_COMPLETE,,,,PENDING,PENDING,PENDING,Full-text verification required
+P12,AUTHOR_TO_COMPLETE,,,,PENDING,PENDING,PENDING,Full-text verification required
+P13,AUTHOR_TO_COMPLETE,,,,PENDING,PENDING,PENDING,Full-text verification required
+P14,AUTHOR_TO_COMPLETE,,,,PENDING,PENDING,PENDING,Full-text verification required
+P15,AUTHOR_TO_COMPLETE,,,,PENDING,PENDING,PENDING,Full-text verification required
+P16,AUTHOR_TO_COMPLETE,,,,PENDING,PENDING,PENDING,Full-text verification required
+P17,AUTHOR_TO_COMPLETE,,,,PENDING,PENDING,PENDING,Full-text verification required
+P18,AUTHOR_TO_COMPLETE,,,,PENDING,PENDING,PENDING,Full-text verification required
+P19,AUTHOR_TO_COMPLETE,,,,PENDING,PENDING,PENDING,Full-text verification required
+P20,AUTHOR_TO_COMPLETE,,,,PENDING,PENDING,PENDING,Full-text verification required
