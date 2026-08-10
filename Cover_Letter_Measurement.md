@@ -12,7 +12,7 @@ This manuscript addresses an under-examined methodological issue: whether report
 
 We use a complete 2x2 factorial design on three public datasets (XJTU-SY, PHM2012, and IMS) with four model classes (Linear Regression, LSTM, TCN, and PatchTST), a constant predictor baseline, leave-one-bearing-out cross-validation, random time-step splitting, and three-seed repeated runs. We report R2, RMSE, MAE, 95% confidence intervals, and Cliff's delta.
 
-The key finding is that evaluation protocol can substantially alter apparent performance. In particular, random window splitting evaluates within-trajectory interpolation rather than new-bearing generalization, and its effect interacts with label construction. These results are relevant to measurement reliability because they show that benchmark performance cannot be interpreted without a clearly specified cross-bearing evaluation protocol.
+The key finding is that evaluation protocol can substantially alter apparent performance. In particular, random window splitting evaluates within-trajectory interpolation rather than new-bearing generalization, and its effect interacts with label construction. From a Measurement perspective, this is a study of the reliability of measurement results and benchmark protocol design: reported performance cannot be interpreted without a clearly specified cross-bearing evaluation protocol. The contribution is therefore about reproducible evaluation and the uncertainty of reported performance, not a machine learning failure analysis.
 
 We also propose the STAR evaluation template, which summarizes the experimentally supported reporting requirements into an auditable checklist: split integrity, target integrity, anchor baseline, and reporting completeness.
 
