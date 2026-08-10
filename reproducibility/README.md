@@ -51,5 +51,5 @@ The scientific results are final. Before journal submission, the following autho
 - ORCID: 0009-0003-4491-6619; email: 202421270@nefu.edu.cn.
 - Funding statement.
 - Public repository: https://github.com/KKK-cell441/rul-evaluation-star
-- DOI: https://doi.org/10.5281/zenodo.21861060
+- DOI: https://doi.org/10.5281/zenodo.21866359
 - Prevalence survey counts were removed from the manuscript; no 20-paper coding claim is made.
