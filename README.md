@@ -2,7 +2,7 @@
 
 Reproducibility package for the manuscript:
 
-**Rethinking RUL Labeling Strategies in Bearing Prognostics: Converged Multi-Dataset Evidence for Evaluation Inflation**
+**Revisiting Evaluation Protocols for Bearing Remaining Useful Life Prediction: Evidence of Split and Label Effects Across Multiple Datasets**
 
 ## Contents
 
