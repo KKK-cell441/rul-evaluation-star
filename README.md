@@ -9,7 +9,7 @@ Reproducibility package for the manuscript:
 ## Contents
 
 - `reproducibility/` contains preprocessing scripts, converged training and split-sensitivity runners, result JSON files, and table/figure generators.
-- `manuscript_revised_v8_jim.pdf` is the latest Springer/JIM submission manuscript.
+- `manuscript_revised_v15_jim.pdf` is the latest Springer/JIM submission manuscript.
 - `manuscript_revised_v7.pdf` remains the Elsevier source version.
 - `figures/` contains the figures used in the manuscript.
 
@@ -42,7 +42,7 @@ python reproducibility/scripts/run_converged_rul_study.py \
   --models Constant LinearRegression StatLSTM TCN PatchTST \
   --labels linear piecewise \
   --epochs 100 \
-  --random-seeds 42 43 44 \
+  --random-seeds 42 43 44 45 46 47 48 49 \
   --output reproducibility/results/converged_xjtu8_v1.json
 ```
 
@@ -57,11 +57,18 @@ python reproducibility/scripts/run_split_sensitivity.py \
   --output reproducibility/results/split_sensitivity_phm_v1.json
 ```
 
+## Additional Sensitivity Analyses
+
+- Global normalization: `reproducibility/results/global_normalization_phm_tcn.json`
+- Validation-bearing rotations: `reproducibility/results/validation_sensitivity_phm_tcn.json`
+- Exact permutation and Cliff's delta: `reproducibility/results/cliff_delta_exact.csv` and `reproducibility/results/v14_summary.json`
+
 ## Table Reproduction
 
 - Main R2 and 2x2 factorial tables: `reproducibility/results/converged_*.json`
 - RMSE/MAE table: `reproducibility/results/converged_*.json`
 - Split sensitivity table: `reproducibility/results/split_sensitivity_*.json`
+- Statistical summary: `reproducibility/results/v14_summary.json`
 - STAR checklist table: static in the manuscript
 
 See `reproducibility/README.md` for additional details.
