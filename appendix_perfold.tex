@@ -1,0 +1,27 @@
+\begin{table*}[!ht]
+\centering
+\caption{Per-fold and per-seed evidence for the protocol effect. LOOCV range is the min--max of linear-label fold $R^2$; seed columns are piecewise-label random-split $R^2$ for seeds 42--49.}
+\label{tab:perfold}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllccccccccc}
+\toprule
+Dataset & Model & Linear LOOCV range & S42 & S43 & S44 & S45 & S46 & S47 & S48 & S49 & Protocol gap \\
+\midrule
+XJTU-SY & LinearRegression & 0.176--0.181 & 0.447 & 0.414 & 0.429 & 0.364 & 0.400 & 0.416 & 0.399 & 0.375 & 0.228 \\
+XJTU-SY & StatLSTM & 0.220--0.225 & 0.435 & 0.430 & 0.401 & 0.386 & 0.432 & 0.415 & 0.385 & 0.399 & 0.188 \\
+XJTU-SY & TCN & 0.219--0.226 & 0.433 & 0.433 & 0.396 & 0.386 & 0.440 & 0.409 & 0.382 & 0.398 & 0.188 \\
+XJTU-SY & PatchTST & 0.220--0.226 & 0.453 & 0.425 & 0.438 & 0.386 & 0.428 & 0.413 & 0.380 & 0.402 & 0.194 \\
+PHM2012 & LinearRegression & -0.444--0.101 & 0.376 & 0.396 & 0.420 & 0.435 & 0.426 & 0.465 & 0.424 & 0.385 & 0.584 \\
+PHM2012 & StatLSTM & -0.057--0.514 & 0.778 & 0.803 & 0.791 & 0.809 & 0.801 & 0.762 & 0.776 & 0.757 & 0.540 \\
+PHM2012 & TCN & 0.033--0.341 & 0.865 & 0.859 & 0.862 & 0.845 & 0.844 & 0.827 & 0.818 & 0.821 & 0.669 \\
+PHM2012 & PatchTST & 0.135--0.657 & 0.841 & 0.854 & 0.855 & 0.817 & 0.857 & 0.775 & 0.808 & 0.776 & 0.454 \\
+IMS & LinearRegression & $-3.000$ to $-0.452$ & 0.328 & 0.313 & 0.318 & 0.333 & 0.315 & 0.310 & 0.327 & 0.319 & 2.429 \\
+IMS & StatLSTM & $-2.372$ to $-0.592$ & 0.706 & 0.695 & 0.697 & 0.691 & 0.688 & 0.684 & 0.681 & 0.694 & 1.900 \\
+IMS & TCN & $-3.013$ to $-0.990$ & 0.714 & 0.715 & 0.717 & 0.706 & 0.706 & 0.710 & 0.703 & 0.712 & 3.041 \\
+IMS & PatchTST & $-1.683$ to $-0.114$ & 0.674 & 0.689 & 0.679 & 0.651 & 0.639 & 0.647 & 0.643 & 0.653 & 1.718 \\
+\bottomrule
+\end{tabular}}
+\end{table*}
+
+The main-table LOOCV runs use the designated fixed validation-bearing offset. The validation-bearing sensitivity runs reported in the text are independent deep-learning repetitions from \texttt{validation\_sensitivity\_phm\_tcn.json}; their offset-1 mean is therefore a stability check rather than a reproduction of the main-table run.
