@@ -39,7 +39,7 @@ RUL Prediction \sep Bearing Prognostics \sep Evaluation Methodology \sep Labelin
 \end{frontmatter}
 
 \section{Introduction}
-Rolling bearings are critical components in rotating machinery, and accurate prediction of their remaining useful life (RUL) supports maintenance scheduling and failure prevention. In recent years, deep learning methods have reported $R^2$ values above 0.99 on public bearing datasets \cite{li2020multiscale,zhang2020lstm,chen2021gru,mo2022transformer}. Most of these studies share two evaluation practices: piecewise linear labels with an 80\% plateau and random splitting of sliding-window samples across the full life trajectory.
+Rolling bearings are critical components in rotating machinery, and accurate prediction of their remaining useful life (RUL) supports maintenance scheduling and failure prevention. In recent years, deep learning methods have reported high $R^2$ values on public bearing datasets \cite{rul_lstm_uq_2022,reg_lstm_2021,gru_tim_2021,transformer_tim_2023}. Most of these studies share two evaluation practices: piecewise linear labels with an 80\% plateau and random splitting of sliding-window samples across the full life trajectory.
 
 A previous version of this study used a fast five-epoch protocol on XJTU-SY only. That protocol was insufficient for comparison with published models trained to convergence. This revision replaces that protocol with converged training, adds PHM2012 and IMS, and reports split-ratio sensitivity.
 
@@ -56,7 +56,7 @@ We contribute:
 Recent bearing RUL studies frequently combine piecewise linear labels with an 80\% plateau and random time-step splitting. We do not report a quantitative literature survey in this version. Instead, we directly evaluate these two protocol choices under controlled experiments on three public datasets, so the claims remain auditable through the reported results and reproducibility package.
 
 \section{Related Work}
-Data-driven RUL prediction has advanced through CNNs, recurrent networks, and attention-based models \cite{li2020multiscale,zhang2020lstm,mo2022transformer}. The focus has mostly been on architecture design, while evaluation protocols remain heterogeneous. Reviews note the absence of standardized benchmarks \cite{zhao2021deep,caesarendra2021machine}. Recent studies also identify within-trajectory dependence and split-induced interpolation as general problems in time-series and ecological applications \cite{leakage_nature,leakage_frontiers}.
+Data-driven RUL prediction has advanced through CNNs, recurrent networks, and attention-based models \cite{rul_lstm_uq_2022,reg_lstm_2021,transformer_tim_2023}. The focus has mostly been on architecture design, while evaluation protocols remain heterogeneous. Reviews note the absence of standardized benchmarks \cite{zhao2021deep,caesarendra2021machine}. Recent studies also identify within-trajectory dependence and split-induced interpolation as general problems in time-series and ecological applications \cite{leakage_nature,leakage_frontiers}.
 
 The methodological gap is not simply the choice of model. It is whether reported scores measure prediction for new bearings or interpolation within the same bearing. Our study measures both on the same preprocessing, models, seeds, and metrics.
 
@@ -275,25 +275,25 @@ R. Zhao, R. Yan, Z. Chen, K. Mao, P. Wang, and R. X. Gao,
 ``Deep learning and its applications to machine health monitoring,''
 \textit{Mech. Syst. Signal Process.}, vol.~115, pp.~213--237, 2019.
 
-\bibitem{li2020multiscale}
-X. Li, W. Zhang, and Q. Ding,
-``Multiscale CNN with self-attention for bearing RUL prediction,''
-\textit{IEEE Trans. Ind. Inform.}, vol.~16, no.~12, pp.~7536--7545, 2020.
+\bibitem{rul_lstm_uq_2022}
+J. Yang, Y. Peng, J. Xie, and P. Wang,
+``Remaining useful life prediction method for bearings based on LSTM with uncertainty quantification,''
+\textit{Sensors}, vol.~22, no.~12, p.~4549, 2022. doi:10.3390/s22124549.
 
-\bibitem{zhang2020lstm}
-J. Zhang, P. Wang, R. Yan, and R. X. Gao,
-``LSTM-based approach for remaining useful life prediction of rolling bearings,''
-\textit{Mech. Syst. Signal Process.}, vol.~135, p.~106389, 2020.
+\bibitem{reg_lstm_2021}
+Z.-H. Liu, X.-D. Meng, H.-L. Wei, L. Chen, B.-L. Lu, Z.-H. Wang, and L. Chen,
+``A regularized LSTM method for predicting remaining useful life of rolling bearings,''
+\textit{Int. J. Autom. Comput.}, vol.~18, no.~4, pp.~581--593, 2021. doi:10.1007/s11633-020-1276-6.
 
-\bibitem{chen2021gru}
-Y. Chen, G. Peng, Z. Zhu, and S. Li,
-``GRU with attention mechanism for bearing RUL prediction,''
-\textit{Neurocomputing}, vol.~451, pp.~213--224, 2021.
+\bibitem{gru_tim_2021}
+Z. Que, X. Jin, and Z. Xu,
+``Remaining useful life prediction for bearings based on a gated recurrent unit,''
+\textit{IEEE Trans. Instrum. Meas.}, vol.~70, pp.~1--11, 2021. doi:10.1109/tim.2021.3054025.
 
-\bibitem{mo2022transformer}
-Y. Mo, Q. Wu, X. Li, and B. Huang,
-``Transformer-based approach for machinery remaining useful life prediction,''
-\textit{IEEE Trans. Instrum. Meas.}, vol.~71, pp.~1--12, 2022.
+\bibitem{transformer_tim_2023}
+H. Peng, B. Jiang, Z. Mao, and S. Liu,
+``Local enhancing transformer with temporal convolutional attention mechanism for bearings remaining useful life prediction,''
+\textit{IEEE Trans. Instrum. Meas.}, vol.~72, pp.~1--12, 2023. doi:10.1109/tim.2023.3291787.
 
 \bibitem{zhao2021deep}
 M. Zhao, M. Kang, B. Tang, and M. Pecht,
