@@ -1,4 +1,6 @@
-# RUL Evaluation Protocol Inflation Study
+# RUL Evaluation Protocol Study
+
+A reproducible framework for evaluating the influence of labeling and protocol design on bearing RUL prediction performance.
 
 Reproducibility package for the manuscript:
 
@@ -6,7 +8,7 @@ Reproducibility package for the manuscript:
 
 ## Contents
 
-- `reproducibility/` contains preprocessing scripts, converged training and split-sensitivity runners, result JSON files, table/figure generators, and prevalence survey materials.
+- `reproducibility/` contains preprocessing scripts, converged training and split-sensitivity runners, result JSON files, and table/figure generators.
 - `manuscript_revised_v6.pdf` is the latest manuscript.
 - `figures/` contains the figures used in the manuscript.
 
