@@ -5,7 +5,7 @@
 - Title: Revisiting Evaluation Protocols for Bearing Remaining Useful Life Prediction: The Effects of Labeling and Temporal Splitting Across Multiple Datasets
 - File: `manuscript_revised_v6.pdf`
 - Source: `manuscript_revised_v6.tex`
-- Pages: 6
+- Pages: 7
 - Template: Elsevier elsarticle / Measurement
 
 ## Author
