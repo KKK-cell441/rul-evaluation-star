@@ -12,8 +12,8 @@
 ## Author
 
 - Author: Zhongkuan Ma
-- Affiliation: Northeast Forestry University, Harbin, China
-- Corresponding email: 2024212760@nefu.edu.cn
+- Affiliation: not included in manuscript; confirm in JIM submission system
+- Corresponding email: 202421270@nefu.edu.cn
 - ORCID: 0009-0003-4491-6619
 
 ## Funding
@@ -24,6 +24,7 @@
 
 - GitHub: https://github.com/KKK-cell441/rul-evaluation-star
 - Zenodo DOI: https://doi.org/10.5281/zenodo.21866359
+- DOI status: 21866359 verified against DataCite as v1.0.4; 21861060 exists but is the older v1.0.1 archive.
 - Reproducibility package: `reproducibility/`
 
 ## Submission Files

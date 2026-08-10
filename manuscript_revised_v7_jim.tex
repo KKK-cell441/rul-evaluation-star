@@ -16,9 +16,8 @@
 
 \title[Revisiting Evaluation Protocols for Bearing RUL Prediction]{Revisiting Evaluation Protocols for Bearing Remaining Useful Life Prediction: A Multi-Dataset Study of Labeling and Temporal Split Effects}
 
-\author*[1]{\fnm{Zhongkuan} \sur{Ma}}\email{2024212760@nefu.edu.cn}
+\author*{\fnm{Zhongkuan} \sur{Ma}}\email{202421270@nefu.edu.cn}
 
-\affil*[1]{\orgname{Northeast Forestry University}, \orgaddress{\city{Harbin}, \country{China}}}
 
 \abstract{Recent bearing RUL studies often report high $R^2$ values under diverse evaluation protocols. Two protocol choices examined in this study are piecewise linear labels with an 80\% plateau and random time-step splitting. We evaluate these choices under converged training on three public datasets (XJTU-SY, PHM2012, IMS) with Linear Regression, LSTM, TCN, PatchTST, a constant predictor baseline, leave-one-bearing-out cross-validation (LOOCV), and three-seed random time-step splits. On XJTU-SY, piecewise labels increase LOOCV $R^2$ by $0.20$--$0.23$, while random splitting adds little. On PHM2012 and IMS, random splitting raises $R^2$ from negative values or $0.17$--$0.25$ under linear LOOCV to $0.70$--$0.86$ under piecewise random splitting, especially on datasets with stronger cross-bearing distribution shifts. The reproduced protocol family shows large protocol-induced inflation, but it does not reach the $R^2>0.99$ magnitude of any specific publication. In all twelve model-dataset cells, every piecewise random-split run exceeded every linear-LOOCV fold (Cliff's delta $=1.0$). Reported high scores in this protocol family are consistent with within-trajectory dependence and interpolation, but they do not prove that every published near-perfect result is caused by the protocol. We report per-fold results, 95\% confidence intervals, effect sizes, RMSE, MAE, split-ratio sensitivity, and convergence epochs, and we summarize the findings into a four-component STAR reporting template: continuous labels, leave-one-bearing-out cross-validation, constant baselines, and multi-model reporting.}
 

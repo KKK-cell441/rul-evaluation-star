@@ -27,5 +27,4 @@ Thank you for your consideration.
 
 Sincerely,
 Zhongkuan Ma
-Northeast Forestry University, Harbin, China
-2024212760@nefu.edu.cn
+202421270@nefu.edu.cn

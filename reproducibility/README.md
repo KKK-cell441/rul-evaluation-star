@@ -65,7 +65,7 @@ This runs TCN with piecewise labels under random 60/20/20, random 80/10/10, and 
 The scientific results are final. Before journal submission, the following author-controlled items must be completed:
 
 - ORCID: 0009-0003-4491-6619
-- Email: 2024212760@nefu.edu.cn
+- Email: 202421270@nefu.edu.cn
 - Funding statement
 - Public repository: https://github.com/KKK-cell441/rul-evaluation-star
 - DOI: https://doi.org/10.5281/zenodo.21866359
