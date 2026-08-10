@@ -32,6 +32,7 @@
 - [x] `README.md`
 - [x] `Highlights.md`
 - [x] `Cover_Letter_Measurement.md`
+- [x] `Suggested_Reviewer_Directions.md`
 - [x] `reproducibility/`
 
 ## Remaining Before Submission
