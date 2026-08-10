@@ -155,6 +155,36 @@ IMS & Linear Reg. & $-2.109$ [$-5.677$; 1.459] & $-4.586$ [$-25.477$; 16.305] & 
 
 Because $R^2$ can be negative and is less interpretable under severe cross-bearing distribution shift, Table~\ref{tab:errors} additionally reports RMSE and MAE for the primary cross-bearing protocol (linear labels, LOOCV) and the reproduced dominant protocol (piecewise labels, random split). These absolute-error metrics confirm the same direction as the $R^2$ results: the protocol change substantially reduces prediction error even when the LOOCV $R^2$ is negative.
 
+Table~\ref{tab:factorial} reports the complete $2 \times 2$ design, including the previously missing linear-label/random-split condition. The split effect is not additive with the label effect. On PHM2012 and IMS, random splitting increases $R^2$ far more under piecewise labels than under linear labels, indicating a label-by-split interaction in addition to the main effects.
+
+\begin{table*}[t]
+\centering
+\caption{Complete $2 \times 2$ protocol comparison. Values are mean $R^2$; LOOCV values are means across held-out bearings and random values are means across three seeds.}
+\label{tab:factorial}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llcccc}
+\toprule
+Dataset & Model & Linear LOOCV & Linear random & Piecewise LOOCV & Piecewise random \\
+\midrule
+XJTU-SY & Linear Reg. & 0.178 & 0.180 & 0.410 & 0.430 \\
+ & LSTM & 0.223 & 0.226 & 0.422 & 0.422 \\
+ & TCN & 0.222 & 0.223 & 0.428 & 0.421 \\
+ & PatchTST & 0.222 & 0.206 & 0.429 & 0.439 \\
+\midrule
+PHM2012 & Linear Reg. & $-0.168$ & 0.273 & $-0.256$ & 0.397 \\
+ & LSTM & 0.245 & 0.791 & $-0.896$ & 0.791 \\
+ & TCN & 0.174 & 0.837 & $-0.260$ & 0.862 \\
+ & PatchTST & 0.369 & 0.827 & $-0.530$ & 0.850 \\
+\midrule
+IMS & Linear Reg. & $-2.109$ & 0.217 & $-4.586$ & 0.320 \\
+ & LSTM & $-1.208$ & 0.588 & $-0.886$ & 0.699 \\
+ & TCN & $-2.331$ & 0.604 & $-0.302$ & 0.715 \\
+ & PatchTST & $-1.058$ & 0.576 & $-2.799$ & 0.681 \\
+\bottomrule
+\end{tabular}}
+\end{table*}
+
 \begin{table*}[t]
 \centering
 \caption{Absolute error metrics for the primary protocol comparison. LOOCV values are means across held-out bearings; random-split values are means across three seeds.}
@@ -242,6 +272,26 @@ We propose the STAR template, which stands for Split integrity, Target integrity
     \item \textbf{Multi-model reporting}: at least two complementary model classes so conclusions are not architecture-specific.
 \end{enumerate}
 An adaptive debiased label that shortens the plateau and smooths the transition remains a practical intermediate option for applications that need early-stage noise suppression. The current experiments suggest that fixing the split protocol is at least as important as fixing the label.
+
+Table~\ref{tab:star} summarizes the template as an auditable checklist. The checklist is derived from the violations and controls observed in the reproduced protocol family rather than from generic best-practice recommendations.
+
+\begin{table}[t]
+\centering
+\caption{STAR evaluation template used as an auditable reporting checklist.}
+\label{tab:star}
+\small
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lll}
+\toprule
+Component & Minimum requirement & Status in this study \\
+\midrule
+Split integrity & Test bearing absent from training and validation & Random window split violates; LOOCV satisfies \\
+Target integrity & Continuous or explicitly justified label construction & Linear and piecewise labels compared separately \\
+Anchor baseline & Constant predictor reported as floor & Included \\
+Reporting completeness & Per-fold results, CI, RMSE, MAE, seeds & Included \\
+\bottomrule
+\end{tabular}}
+\end{table}
 
 \subsection{Limitations}
 We did not reproduce exact published checkpoints because public code was unavailable. IMS has only three held-out test sets, so its confidence intervals are wide; we therefore treat IMS as directional evidence. The external datasets use the same statistical feature pipeline rather than each paper's raw-signal preprocessing. PU is not used because it does not provide run-to-failure trajectories. We do not provide a quantitative prevalence survey in this version; protocol-level claims are limited to the reproduced protocol family. Future work should run exact published pipelines when code becomes available and extend STAR to raw-signal and uncertainty-aware models.
