@@ -9,7 +9,7 @@ Reproducibility package for the manuscript:
 ## Contents
 
 - `reproducibility/` contains preprocessing scripts, converged training and split-sensitivity runners, result JSON files, and table/figure generators.
-- `manuscript_revised_v6.pdf` is the latest manuscript.
+- `manuscript_revised_v7.pdf` is the latest manuscript.
 - `figures/` contains the figures used in the manuscript.
 
 ## Environment
