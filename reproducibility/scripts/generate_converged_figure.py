@@ -6,15 +6,15 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-BASE = Path.home() / "Documents" / "\u673a\u5668\u5b66\u4e60" / "RUL-Prediction-Framework" / "results"
-OUT = Path.home() / "Desktop" / "0805" / "rul_labeling_paper" / "figures"
+BASE = Path(__file__).resolve().parents[1] / "results"
+OUT = Path(__file__).resolve().parents[2] / "figures"
 FILES = {
     "XJTU-SY": "converged_xjtu8_v1.json",
     "PHM2012": "converged_phm_v1.json",
     "IMS": "converged_ims_v1.json",
 }
-MODELS = ["LinearRegression", "StatLSTM", "TCN"]
-COLORS = ["#4c72b0", "#dd8452", "#55a868"]
+MODELS = ["LinearRegression", "StatLSTM", "TCN", "PatchTST"]
+COLORS = ["#4c72b0", "#dd8452", "#55a868", "#8172b3"]
 
 
 def main():
@@ -54,7 +54,7 @@ def main():
         ax.axhline(0, color="0.3", lw=0.8)
         ax.set_title(ds)
         ax.set_xticks(x)
-        ax.set_xticklabels(["LR", "LSTM", "TCN"])
+        ax.set_xticklabels(["LR", "LSTM", "TCN", "PatchTST"])
         ax.grid(axis="y", alpha=0.25)
     axes[0].set_ylabel("$R^2$")
     axes[0].legend(frameon=False, loc="lower right", fontsize=8)
