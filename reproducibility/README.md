@@ -1,27 +1,38 @@
 # RUL Evaluation Protocol Reproducibility Package
 
 This package supports the manuscript:
-*Rethinking RUL Labeling Strategies in Bearing Prognostics: Converged Multi-Dataset Evidence for Evaluation Inflation*
+*Revisiting Evaluation Protocols for Bearing Remaining Useful Life Prediction: The Effects of Labeling and Temporal Splitting Across Multiple Datasets*
 
 ## Environment
-```
+
+- Python 3.12
+- PyTorch >= 2.0
+- NumPy, SciPy, scikit-learn, pandas, PyWavelets, matplotlib, seaborn
+
+Install with:
+
+```bash
 pip install -r requirements.txt
 ```
 
 ## Data
+
 The scripts expect processed data under `data/processed/` in the following layout:
+
 - `XJTU-SY/`
 - `PHM2012/`
 - `IMS/`
 
-Use `scripts/preprocess_public_rul.py` for PHM2012 and IMS, and `scripts/preprocess_xjtu15.py` for XJTU-SY. The raw datasets are publicly available from their original sources.
+Use `scripts/preprocess_public_rul.py` for PHM2012 and IMS, and `scripts/preprocess_xjtu15.py` for XJTU-SY. Raw datasets are publicly available from their original sources.
 
 ## Converged Protocol
+
 Run:
-```
-python scripts/run_converged_star.py \
+
+```bash
+python scripts/run_converged_rul_study.py \
   --data-dir data/processed/XJTU-SY \
-  --models Constant LinearRegression StatLSTM TCN \
+  --models Constant LinearRegression StatLSTM TCN PatchTST \
   --labels linear piecewise \
   --epochs 100 \
   --random-seeds 42 43 44 \
@@ -31,8 +42,8 @@ python scripts/run_converged_star.py \
 Repeat for PHM2012 with `--epochs 100` and IMS with `--epochs 60`.
 
 ## Split Sensitivity
-Run:
-```
+
+```bash
 python scripts/run_split_sensitivity.py \
   --data-dir data/processed/PHM2012 \
   --epochs 100 \
@@ -41,15 +52,22 @@ python scripts/run_split_sensitivity.py \
 
 This runs TCN with piecewise labels under random 60/20/20, random 80/10/10, and chronological time-block 70/15/15.
 
-## Outputs
-- `results/converged_*.json`: main converged protocol, per-fold and per-seed results.
+## Outputs and Table Mapping
+
+- `results/converged_*.json`: main protocol results, including per-fold and per-seed values, RMSE, MAE, and R2.
 - `results/split_sensitivity_*.json`: split-ratio and time-block sensitivity.
-- Quantitative prevalence survey counts are not part of this version; protocol-level claims are limited to the reproduced experimental family.
+- Table 1, Table 2, and the RMSE/MAE table are generated from `results/converged_*.json`.
+- Table 4 is generated from `results/split_sensitivity_*.json`.
+- Table 5 is the STAR checklist in the manuscript.
 
 ## Status
+
 The scientific results are final. Before journal submission, the following author-controlled items must be completed:
-- ORCID: 0009-0003-4491-6619; email: 202421270@nefu.edu.cn.
-- Funding statement.
+
+- ORCID: 0009-0003-4491-6619
+- Email: 2024212760@nefu.edu.cn
+- Funding statement
 - Public repository: https://github.com/KKK-cell441/rul-evaluation-star
 - DOI: https://doi.org/10.5281/zenodo.21866359
-- Prevalence survey counts were removed from the manuscript; no 20-paper coding claim is made.
+
+Quantitative prevalence survey counts are not part of this version. Protocol-level claims are limited to the reproduced experimental family.
