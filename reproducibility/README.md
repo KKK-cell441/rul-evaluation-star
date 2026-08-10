@@ -1,7 +1,7 @@
 # RUL Evaluation Protocol Reproducibility Package
 
 This package supports the manuscript:
-*Revisiting Evaluation Protocols for Bearing Remaining Useful Life Prediction: A Multi-Dataset Study of Labeling and Temporal Split Effects*
+*Reconsidering Reliability Assessment of Data-Driven Predictive Maintenance: The Impact of Evaluation Protocols on Bearing Remaining Useful Life Prediction*
 
 ## Environment
 

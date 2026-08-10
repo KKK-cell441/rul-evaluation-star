@@ -4,12 +4,12 @@ A reproducible framework for evaluating the influence of labeling and protocol d
 
 Reproducibility package for the manuscript:
 
-**Revisiting Evaluation Protocols for Bearing Remaining Useful Life Prediction: A Multi-Dataset Study of Labeling and Temporal Split Effects**
+**Reconsidering Reliability Assessment of Data-Driven Predictive Maintenance: The Impact of Evaluation Protocols on Bearing Remaining Useful Life Prediction**
 
 ## Contents
 
 - `reproducibility/` contains preprocessing scripts, converged training and split-sensitivity runners, result JSON files, and table/figure generators.
-- `manuscript_revised_v7_jim.pdf` is the latest Springer/JIM submission manuscript.
+- `manuscript_revised_v8_jim.pdf` is the latest Springer/JIM submission manuscript.
 - `manuscript_revised_v7.pdf` remains the Elsevier source version.
 - `figures/` contains the figures used in the manuscript.
 

@@ -1,0 +1,196 @@
+[
+  {
+    "ID": "P01",
+    "DOI": "10.1016/j.aei.2023.102247",
+    "links": [
+      "https://api.elsevier.com/content/article/PII:S1474034623003750?httpAccept=text/xml",
+      "https://api.elsevier.com/content/article/PII:S1474034623003750?httpAccept=text/plain"
+    ],
+    "PII": null,
+    "abstract": null
+  },
+  {
+    "ID": "P02",
+    "DOI": "10.3390/s24102992",
+    "links": [
+      "https://www.mdpi.com/1424-8220/24/10/2992/pdf"
+    ],
+    "PII": null,
+    "abstract": "<jats:p>Ensuring precise prediction of the remaining useful life (RUL) for bearings in rolling machinery is crucial for preventing sudden machine failures and optimizing equipment maintenance strategies. Since the significant interference encountered in real industrial environments and the high complexity of the machining process, accurate and robust RUL prediction of rolling bearings is of tremendous research importance. Hence, a novel RUL prediction model called CNN-VAE-MBiLSTM is proposed in this paper by integrating advantages of convolutional neural network (CNN), variational autoencoder (VAE), and multiple bi-directional long short-term memory (MBiLSTM). The proposed approach includes a CNN-VAE model and a MBiLSTM model. The CNN-VAE model performs well for automatically extracting low-dimensional features from time\u2013frequency spectrum of multi-axis signals, which simplifies the construction of features and minimizes the subjective bias of designers. Based on these features, the MBiLSTM model achieves a commendable performance in the prediction of RUL for bearings, which independently captures sequential characteristics of features in each axis and further obtains differences among multi-axis features. The performance of the proposed approach is validated through an industrial case, and the result indicates that it exhibits a higher accuracy and a better anti-noise capacity in RUL predictions than comparable methods.</jats:p>"
+  },
+  {
+    "ID": "P03",
+    "DOI": "10.1109/access.2020.2970444",
+    "links": [
+      "http://xplorestaging.ieee.org/ielx7/6287639/8948470/08976178.pdf?arnumber=8976178"
+    ],
+    "PII": null,
+    "abstract": null
+  },
+  {
+    "ID": "P04",
+    "DOI": "10.1016/j.measurement.2023.112600",
+    "links": [
+      "https://api.elsevier.com/content/article/PII:S0263224123001641?httpAccept=text/xml",
+      "https://api.elsevier.com/content/article/PII:S0263224123001641?httpAccept=text/plain"
+    ],
+    "PII": null,
+    "abstract": null
+  },
+  {
+    "ID": "P05",
+    "DOI": "10.3390/s24227257",
+    "links": [
+      "https://www.mdpi.com/1424-8220/24/22/7257/pdf"
+    ],
+    "PII": null,
+    "abstract": "<jats:p>Bearings are pivotal components of rotating machines where any defects could propagate and trigger systematic failures. Once faults are detected, accurately predicting remaining useful life (RUL) is essential for optimizing predictive maintenance. Although data-driven methods demonstrate promising performance in direct RUL prediction, their robustness and practicability need further improvement regarding physical interpretation and uncertainty quantification. This work leverages variational neural networks to model bearing degradation behind envelope spectra. A convolutional variational autoencoder for regression (CVAER) is developed to probabilistically predict RUL distributions with confidence measures. Enhanced average envelope spectra (AES) are used as network input for its physical robustness in bearing condition assessment and fault detection. The use of the envelope spectrum ensures that it contains only bearing-related information by removing other rotor-related frequencies, hence it improves the RUL prediction. Unlike traditional variational autoencoders, the probabilistic regressor and latent generator are formulated to quantify uncertainty in RUL estimates and learn meaningful latent representations conditioned on specific RUL. Experimental validations are conducted on vibration data collected using multiple accelerometers whose natural frequencies cover bearing resonance ranges to ensure fault detection reliability. Beyond conventional bearing diagnosis, envelope spectra are extended for statistical RUL prediction integrating physical knowledge of actual defect conditions. Comparative and ablation studies are conducted against benchmark models to demonstrate their effectiveness.</jats:p>"
+  },
+  {
+    "ID": "P06",
+    "DOI": "10.3390/machines10050369",
+    "links": [
+      "https://www.mdpi.com/2075-1702/10/5/369/pdf"
+    ],
+    "PII": null,
+    "abstract": "<jats:p>Recently, deep learning techniques have been successfully used for bearing remaining useful life (RUL) prediction. However, the degradation pattern of bearings can be much different from each other, which leads to the trained model usually not being able to work well for RUL prediction of a new bearing. As a method that can adapt a model trained on source datasets to a different but relative unlabeled target dataset, transfer learning shows the potential to solve this problem. Therefore, we propose a two-stage transfer regression (TR)-based bearing RUL prediction method. Firstly, the incipient fault point (IFP) is detected by a convolutional neural network (CNN) classifier to identity the start time of degradation stage and label the training samples. Then, a transfer regression CNN with multiloss is constructed for RUL prediction, including regression loss, classification loss, maximum mean discrepancy (MMD) and regularization loss, which can not only extract fault information from fault classification loss for RUL prediction, but also minimize the probability distribution distance, thus helping the method to be trained in a domain-invariant way via the transfer regression algorithm. Finally, real data collected from run-to-failure bearing experiments are analyzed by the TR-based CNN method. The results and comparisons with state-of-the-art methods demonstrate the superiority and reliable performance of the proposed method for bearing RUL prediction.</jats:p>"
+  },
+  {
+    "ID": "P07",
+    "DOI": "10.1016/j.measurement.2021.109273",
+    "links": [
+      "https://api.elsevier.com/content/article/PII:S0263224121002803?httpAccept=text/xml",
+      "https://api.elsevier.com/content/article/PII:S0263224121002803?httpAccept=text/plain"
+    ],
+    "PII": null,
+    "abstract": null
+  },
+  {
+    "ID": "P08",
+    "DOI": "10.1016/j.measurement.2020.108753",
+    "links": [
+      "https://api.elsevier.com/content/article/PII:S0263224120312537?httpAccept=text/xml",
+      "https://api.elsevier.com/content/article/PII:S0263224120312537?httpAccept=text/plain"
+    ],
+    "PII": null,
+    "abstract": null
+  },
+  {
+    "ID": "P09",
+    "DOI": "10.1016/j.measurement.2020.108878",
+    "links": [
+      "https://api.elsevier.com/content/article/PII:S026322412031366X?httpAccept=text/xml",
+      "https://api.elsevier.com/content/article/PII:S026322412031366X?httpAccept=text/plain"
+    ],
+    "PII": null,
+    "abstract": null
+  },
+  {
+    "ID": "P10",
+    "DOI": "10.1016/j.eswa.2020.114391",
+    "links": [
+      "https://api.elsevier.com/content/article/PII:S0957417420310630?httpAccept=text/xml",
+      "https://api.elsevier.com/content/article/PII:S0957417420310630?httpAccept=text/plain"
+    ],
+    "PII": null,
+    "abstract": null
+  },
+  {
+    "ID": "P11",
+    "DOI": "10.1016/j.asoc.2024.111649",
+    "links": [
+      "https://api.elsevier.com/content/article/PII:S156849462400423X?httpAccept=text/xml",
+      "https://api.elsevier.com/content/article/PII:S156849462400423X?httpAccept=text/plain"
+    ],
+    "PII": null,
+    "abstract": null
+  },
+  {
+    "ID": "P12",
+    "DOI": "10.1016/j.ymssp.2022.110010",
+    "links": [
+      "https://api.elsevier.com/content/article/PII:S0888327022010780?httpAccept=text/xml",
+      "https://api.elsevier.com/content/article/PII:S0888327022010780?httpAccept=text/plain"
+    ],
+    "PII": null,
+    "abstract": null
+  },
+  {
+    "ID": "P13",
+    "DOI": "10.1016/j.measurement.2020.107572",
+    "links": [
+      "https://api.elsevier.com/content/article/PII:S0263224120301093?httpAccept=text/xml",
+      "https://api.elsevier.com/content/article/PII:S0263224120301093?httpAccept=text/plain"
+    ],
+    "PII": null,
+    "abstract": null
+  },
+  {
+    "ID": "P14",
+    "DOI": "10.1109/tii.2019.2915536",
+    "links": [
+      "http://xplorestaging.ieee.org/ielx7/9424/8952812/08709822.pdf?arnumber=8709822"
+    ],
+    "PII": null,
+    "abstract": null
+  },
+  {
+    "ID": "P15",
+    "DOI": "10.1016/j.ymssp.2019.106302",
+    "links": [
+      "https://api.elsevier.com/content/article/PII:S0888327019305230?httpAccept=text/xml",
+      "https://api.elsevier.com/content/article/PII:S0888327019305230?httpAccept=text/plain"
+    ],
+    "PII": null,
+    "abstract": null
+  },
+  {
+    "ID": "P16",
+    "DOI": "10.3390/machines10090729",
+    "links": [
+      "https://www.mdpi.com/2075-1702/10/9/729/pdf"
+    ],
+    "PII": null,
+    "abstract": "<jats:p>Rolling bearings are an important part of rotating machinery, and are of great significance for fault diagnosis and life monitoring of rolling bearings. Analyzing fault signals, extracting effective degradation information and establishing corresponding models are the premise of residual life prediction of rolling bearings. In this paper, first, the time-domain features were extracted to form the eigenvector of the vibration signal, and then the index representing the bearing degradation was found. It was found that the time-domain index could effectively describe the degradation information of the bearing, and the multi-dimensional time-domain characteristic information could effectively describe the attenuation trend of the vibration signal of the rolling bearing. On this basis, appropriate feature vectors were selected to describe the degradation characteristics of bearings. Aiming at the problems of large amounts of data, large amounts of information redundancy and unclear performance index of multi-dimensional feature vectors, the dimensionality of multi-dimensional feature vectors was reduced with principal component analysis, thus, simplifying the multi-dimensional feature vectors and reducing the information redundancy. Finally, in view of the support vector machine (SVM)\u2019s needs to determine kernel function parameters and penalty factors, the squirrel optimization algorithm (SOA) was used to adaptively select parameters and establish the state-life evaluation model of rolling bearings. In addition, mean absolute error (MAE) and root mean squared error (RMSE) were used to comprehensively evaluate SOA. The results showed that the SOA reduced the errors by 5.1% and 13.6%, respectively, compared with a genetic algorithm (GA). Compared with particle swarm optimization (PSO), the error of SOA was reduced by 7.6% and 15.9%, respectively. It showed that SOA-SVM effectively improved the adaptability and regression performance of SVM, thus, significantly improving the prediction accuracy.</jats:p>"
+  },
+  {
+    "ID": "P17",
+    "DOI": "10.1016/j.engappai.2024.108575",
+    "links": [
+      "https://api.elsevier.com/content/article/PII:S0952197624007334?httpAccept=text/xml",
+      "https://api.elsevier.com/content/article/PII:S0952197624007334?httpAccept=text/plain"
+    ],
+    "PII": null,
+    "abstract": null
+  },
+  {
+    "ID": "P18",
+    "DOI": "10.1016/j.measurement.2018.12.028",
+    "links": [
+      "https://api.elsevier.com/content/article/PII:S0263224118311734?httpAccept=text/xml",
+      "https://api.elsevier.com/content/article/PII:S0263224118311734?httpAccept=text/plain"
+    ],
+    "PII": null,
+    "abstract": null
+  },
+  {
+    "ID": "P19",
+    "DOI": "10.1016/j.engappai.2024.108852",
+    "links": [
+      "https://api.elsevier.com/content/article/PII:S0952197624010108?httpAccept=text/xml",
+      "https://api.elsevier.com/content/article/PII:S0952197624010108?httpAccept=text/plain"
+    ],
+    "PII": null,
+    "abstract": null
+  },
+  {
+    "ID": "P20",
+    "DOI": "10.1016/j.asoc.2022.109630",
+    "links": [
+      "https://api.elsevier.com/content/article/PII:S1568494622006792?httpAccept=text/xml",
+      "https://api.elsevier.com/content/article/PII:S1568494622006792?httpAccept=text/plain"
+    ],
+    "PII": null,
+    "abstract": null
+  }
+]

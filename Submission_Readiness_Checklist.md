@@ -2,10 +2,10 @@
 
 ## Manuscript
 
-- Title: Revisiting Evaluation Protocols for Bearing Remaining Useful Life Prediction: A Multi-Dataset Study of Labeling and Temporal Split Effects
-- File: `manuscript_revised_v7_jim.pdf`
-- Source: `manuscript_revised_v7_jim.tex`
-- Pages: 14
+- Title: Reconsidering Reliability Assessment of Data-Driven Predictive Maintenance: The Impact of Evaluation Protocols on Bearing Remaining Useful Life Prediction
+- File: `manuscript_revised_v8_jim.pdf`
+- Source: `manuscript_revised_v8_jim.tex`
+- Pages: 16
 - Template: Springer sn-jnl (conversion complete)
 - Elsevier source version: `manuscript_revised_v7.pdf` / `manuscript_revised_v7.tex`
 
@@ -30,8 +30,8 @@
 
 - [x] `manuscript_revised_v7.pdf`
 - [x] `manuscript_revised_v7.tex`
-- [x] `manuscript_revised_v7_jim.pdf`
-- [x] `manuscript_revised_v7_jim.tex`
+- [x] `manuscript_revised_v8_jim.pdf`
+- [x] `manuscript_revised_v8_jim.tex`
 - [x] `sn-jnl.cls`
 - [x] `sn-mathphys-num.bst`
 - [x] `README.md`
@@ -46,9 +46,10 @@
 - [ ] Confirm ORCID and author details in the online submission system.
 - [ ] Confirm exact dataset versions and download dates.
 - [ ] Confirm publisher-specific declarations in the online form.
-- [ ] If a new Zenodo DOI is generated after a later release, update the manuscript DOI.
+- [ ] Release the STAR audit coding sheet and `fulltexts/P03.pdf` in the public GitHub/Zenodo package.
+- [ ] If a new Zenodo DOI is generated after the supplementary release, update the manuscript DOI.
 - [ ] No further experiments or model additions planned.
 
 ## JIM-Specific Note
 
-JIM is a Springer journal. The manuscript has been converted to the Springer `sn-jnl` template; `manuscript_revised_v7_jim.pdf` is the submission-ready build.
+JIM is a Springer journal. The manuscript has been converted to the Springer `sn-jnl` template; `manuscript_revised_v8_jim.pdf` is the current submission-ready build.

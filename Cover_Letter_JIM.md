@@ -4,11 +4,11 @@ Dear Editor,
 
 We are submitting our manuscript entitled:
 
-**Revisiting Evaluation Protocols for Bearing Remaining Useful Life Prediction: A Multi-Dataset Study of Labeling and Temporal Split Effects**
+**Reconsidering Reliability Assessment of Data-Driven Predictive Maintenance: The Impact of Evaluation Protocols on Bearing Remaining Useful Life Prediction**
 
 for consideration in the *Journal of Intelligent Manufacturing*.
 
-This manuscript addresses a methodological issue in intelligent manufacturing: whether reported bearing remaining useful life (RUL) improvements reflect model capability or evaluation design. The paper does not propose a new diagnostic network. Instead, it establishes reproducible evaluation protocols and improves comparability across bearing RUL studies. It is not a critique of specific models or published results; it isolates protocol factors under controlled conditions and focuses on industrial AI reproducibility. The study is not an architecture ranking exercise; the model classes are controlled to test whether the protocol effect persists across different inductive biases.
+This manuscript addresses a reliability-assessment issue in intelligent manufacturing: whether reported bearing remaining useful life (RUL) scores can support deployment-readiness decisions for AI-based predictive maintenance systems. The paper does not propose a new diagnostic network. Instead, it establishes reproducible evaluation protocols and improves comparability across bearing RUL studies. It is not a critique of specific models or published results; it isolates protocol factors under controlled conditions and focuses on industrial AI reliability and reproducibility. The study is not an architecture ranking exercise; the model classes are controlled to test whether the protocol effect persists across different inductive biases.
 
 We use a complete 2x2 factorial design on three public datasets (XJTU-SY, PHM2012, and IMS) with four model classes, a constant predictor baseline, leave-one-bearing-out cross-validation, random time-step splitting, and three-seed repeated runs. We report R2, RMSE, MAE, 95% confidence intervals, and Cliff's delta. The results show that evaluation protocol can substantially alter reported performance, and that the effect of random window splitting interacts with label construction.
 

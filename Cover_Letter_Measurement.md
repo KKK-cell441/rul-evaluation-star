@@ -4,7 +4,7 @@ Dear Editor,
 
 We are submitting our manuscript entitled:
 
-**Revisiting Evaluation Protocols for Bearing Remaining Useful Life Prediction: A Multi-Dataset Study of Labeling and Temporal Split Effects**
+**Reconsidering Reliability Assessment of Data-Driven Predictive Maintenance: The Impact of Evaluation Protocols on Bearing Remaining Useful Life Prediction**
 
 for consideration in *Measurement*.
 

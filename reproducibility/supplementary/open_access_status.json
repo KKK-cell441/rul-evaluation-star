@@ -1,0 +1,182 @@
+[
+  {
+    "ID": "P01",
+    "DOI": "10.1016/j.aei.2023.102247",
+    "title": "Conditional variational transformer for bearing remaining useful life prediction",
+    "is_oa": true,
+    "pdf_url": "https://doi.org/10.1016/j.aei.2023.102247",
+    "best_oa_location": "https://doi.org/10.1016/j.aei.2023.102247",
+    "error": null
+  },
+  {
+    "ID": "P02",
+    "DOI": "10.3390/s24102992",
+    "title": "Rolling Bearing Remaining Useful Life Prediction Based on CNN-VAE-MBiLSTM",
+    "is_oa": true,
+    "pdf_url": "https://www.mdpi.com/1424-8220/24/10/2992/pdf?version=1715178369",
+    "best_oa_location": "https://www.mdpi.com/1424-8220/24/10/2992/pdf?version=1715178369",
+    "error": null
+  },
+  {
+    "ID": "P03",
+    "DOI": "10.1109/access.2020.2970444",
+    "title": "Cascade Fusion Convolutional Long-Short Time Memory Network for Remaining Useful Life Prediction of Rolling Bearing",
+    "is_oa": true,
+    "pdf_url": "https://ieeexplore.ieee.org/ielx7/6287639/8948470/08976178.pdf",
+    "best_oa_location": "https://ieeexplore.ieee.org/ielx7/6287639/8948470/08976178.pdf",
+    "error": null
+  },
+  {
+    "ID": "P04",
+    "DOI": "10.1016/j.measurement.2023.112600",
+    "title": "Prediction of bearing remaining useful life based on DACN-ConvLSTM model",
+    "is_oa": false,
+    "pdf_url": null,
+    "best_oa_location": null,
+    "error": null
+  },
+  {
+    "ID": "P05",
+    "DOI": "10.3390/s24227257",
+    "title": "From Envelope Spectra to Bearing Remaining Useful Life: An Intelligent Vibration-Based Prediction Model with Quantified Uncertainty",
+    "is_oa": true,
+    "pdf_url": "https://www.mdpi.com/1424-8220/24/22/7257/pdf?version=1731578649",
+    "best_oa_location": "https://www.mdpi.com/1424-8220/24/22/7257/pdf?version=1731578649",
+    "error": null
+  },
+  {
+    "ID": "P06",
+    "DOI": "10.3390/machines10050369",
+    "title": "A Two-Stage Transfer Regression Convolutional Neural Network for Bearing Remaining Useful Life Prediction",
+    "is_oa": true,
+    "pdf_url": "https://www.mdpi.com/2075-1702/10/5/369/pdf?version=1652358187",
+    "best_oa_location": "https://www.mdpi.com/2075-1702/10/5/369/pdf?version=1652358187",
+    "error": null
+  },
+  {
+    "ID": "P07",
+    "DOI": "10.1016/j.measurement.2021.109273",
+    "title": "A novel method for journal bearing degradation evaluation and remaining useful life prediction under different working conditions",
+    "is_oa": false,
+    "pdf_url": null,
+    "best_oa_location": null,
+    "error": null
+  },
+  {
+    "ID": "P08",
+    "DOI": "10.1016/j.measurement.2020.108753",
+    "title": "An enhanced encoder\u2013decoder framework for bearing remaining useful life prediction",
+    "is_oa": false,
+    "pdf_url": null,
+    "best_oa_location": null,
+    "error": null
+  },
+  {
+    "ID": "P09",
+    "DOI": "10.1016/j.measurement.2020.108878",
+    "title": "A remaining useful life prediction method for bearing based on deep neural networks",
+    "is_oa": false,
+    "pdf_url": null,
+    "best_oa_location": null,
+    "error": null
+  },
+  {
+    "ID": "P10",
+    "DOI": "10.1016/j.eswa.2020.114391",
+    "title": "Bearing remaining useful life prediction under starved lubricating condition using time domain acoustic emission signal processing",
+    "is_oa": false,
+    "pdf_url": null,
+    "best_oa_location": null,
+    "error": null
+  },
+  {
+    "ID": "P11",
+    "DOI": "10.1016/j.asoc.2024.111649",
+    "title": "Quantile regression network-based cross-domain prediction model for rolling bearing remaining useful life",
+    "is_oa": false,
+    "pdf_url": null,
+    "best_oa_location": null,
+    "error": null
+  },
+  {
+    "ID": "P12",
+    "DOI": "10.1016/j.ymssp.2022.110010",
+    "title": "Bearing remaining useful life prediction using self-adaptive graph convolutional networks with self-attention mechanism",
+    "is_oa": false,
+    "pdf_url": null,
+    "best_oa_location": null,
+    "error": null
+  },
+  {
+    "ID": "P13",
+    "DOI": "10.1016/j.measurement.2020.107572",
+    "title": "Remaining useful life prediction of rolling bearing using fractal theory",
+    "is_oa": false,
+    "pdf_url": null,
+    "best_oa_location": null,
+    "error": null
+  },
+  {
+    "ID": "P14",
+    "DOI": "10.1109/tii.2019.2915536",
+    "title": "Simultaneous Bearing Fault Recognition and Remaining Useful Life Prediction Using Joint-Loss Convolutional Neural Network",
+    "is_oa": false,
+    "pdf_url": null,
+    "best_oa_location": null,
+    "error": null
+  },
+  {
+    "ID": "P15",
+    "DOI": "10.1016/j.ymssp.2019.106302",
+    "title": "Weibull accelerated failure time regression model for remaining useful life prediction of bearing working under multiple operating conditions",
+    "is_oa": false,
+    "pdf_url": null,
+    "best_oa_location": null,
+    "error": null
+  },
+  {
+    "ID": "P16",
+    "DOI": "10.3390/machines10090729",
+    "title": "Remaining Useful Life Estimation of Rolling Bearing Based on SOA-SVM Algorithm",
+    "is_oa": true,
+    "pdf_url": "https://www.mdpi.com/2075-1702/10/9/729/pdf?version=1661502695",
+    "best_oa_location": "https://www.mdpi.com/2075-1702/10/9/729/pdf?version=1661502695",
+    "error": null
+  },
+  {
+    "ID": "P17",
+    "DOI": "10.1016/j.engappai.2024.108575",
+    "title": "Entropy-based domain adaption strategy for predicting remaining useful life of rolling element bearing",
+    "is_oa": false,
+    "pdf_url": null,
+    "best_oa_location": null,
+    "error": null
+  },
+  {
+    "ID": "P18",
+    "DOI": "10.1016/j.measurement.2018.12.028",
+    "title": "A novel Switching Unscented Kalman Filter method for remaining useful life prediction of rolling bearing",
+    "is_oa": false,
+    "pdf_url": null,
+    "best_oa_location": null,
+    "error": null
+  },
+  {
+    "ID": "P19",
+    "DOI": "10.1016/j.engappai.2024.108852",
+    "title": "Remaining useful life prediction of rolling bearing via composite multiscale permutation entropy and Elman neural network",
+    "is_oa": false,
+    "pdf_url": null,
+    "best_oa_location": null,
+    "error": null
+  },
+  {
+    "ID": "P20",
+    "DOI": "10.1016/j.asoc.2022.109630",
+    "title": "Remaining useful life prediction of rolling bearing under limited data based on adaptive time-series feature window and multi-step ahead strategy",
+    "is_oa": true,
+    "pdf_url": "https://doi.org/10.1016/j.asoc.2022.109630",
+    "best_oa_location": "https://doi.org/10.1016/j.asoc.2022.109630",
+    "error": null
+  }
+]
