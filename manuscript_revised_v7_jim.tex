@@ -1,42 +1,30 @@
 % =============================================================================
-% Rethinking RUL Labeling Strategies in Bearing Prognostics:
-% Converged Multi-Dataset Evidence for Evaluation Inflation
-% v5 response to second review
+% RUL Evaluation Protocol Study: Springer JIM submission
 % =============================================================================
-\documentclass[5p,twocolumn]{elsarticle}
+\documentclass[pdflatex,sn-mathphys-num]{sn-jnl}
 
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath,amssymb}
-\usepackage{graphicx}
-\usepackage{booktabs}
-\usepackage{hyperref}
-\usepackage{bm}
-\usepackage{float}
-\usepackage{multirow}
-
-\journal{Measurement}
+\usepackage{graphicx}%
+\usepackage{amsmath,amssymb,amsfonts}%
+\usepackage{booktabs}%
+\usepackage{multirow}%
+\usepackage{float}%
+\usepackage{bm}%
 
 \graphicspath{{figures/}}
 
 \begin{document}
 
-\begin{frontmatter}
+\title[Revisiting Evaluation Protocols for Bearing RUL Prediction]{Revisiting Evaluation Protocols for Bearing Remaining Useful Life Prediction: The Effects of Labeling and Temporal Splitting Across Multiple Datasets}
 
-\title{Revisiting Evaluation Protocols for Bearing Remaining Useful Life Prediction: The Effects of Labeling and Temporal Splitting Across Multiple Datasets}
+\author*[1]{\fnm{Zhongkuan} \sur{Ma}}\email{2024212760@nefu.edu.cn}
 
-\author[1]{Zhongkuan Ma\corref{cor1}}
-\ead{2024212760@nefu.edu.cn}
-\cortext[cor1]{Corresponding author. ORCID: 0009-0003-4491-6619}
+\affil*[1]{\orgname{Northeast Forestry University}, \orgaddress{\city{Harbin}, \country{China}}}
 
-\begin{abstract}
-Recent bearing RUL studies often report high $R^2$ values under diverse evaluation protocols. Two protocol choices examined in this study are piecewise linear labels with an 80\% plateau and random time-step splitting. We evaluate these choices under converged training on three public datasets (XJTU-SY, PHM2012, IMS) with Linear Regression, LSTM, TCN, PatchTST, a constant predictor baseline, leave-one-bearing-out cross-validation (LOOCV), and three-seed random time-step splits. On XJTU-SY, piecewise labels increase LOOCV $R^2$ by $0.20$--$0.23$, while random splitting adds little. On PHM2012 and IMS, random splitting raises $R^2$ from negative values or $0.17$--$0.25$ under linear LOOCV to $0.70$--$0.86$ under piecewise random splitting, especially on datasets with stronger cross-bearing distribution shifts. The reproduced protocol family shows large protocol-induced inflation, but it does not reach the $R^2>0.99$ magnitude of any specific publication. In all twelve model-dataset cells, every piecewise random-split run exceeded every linear-LOOCV fold (Cliff's delta $=1.0$). Reported high scores in this protocol family are consistent with within-trajectory dependence and interpolation, but they do not prove that every published near-perfect result is caused by the protocol. We report per-fold results, 95\% confidence intervals, effect sizes, RMSE, MAE, split-ratio sensitivity, and convergence epochs, and we propose a four-component STAR framework: continuous labels, leave-one-bearing-out cross-validation, constant baselines, and multi-model reporting.
-\end{abstract}
+\abstract{Recent bearing RUL studies often report high $R^2$ values under diverse evaluation protocols. Two protocol choices examined in this study are piecewise linear labels with an 80\% plateau and random time-step splitting. We evaluate these choices under converged training on three public datasets (XJTU-SY, PHM2012, IMS) with Linear Regression, LSTM, TCN, PatchTST, a constant predictor baseline, leave-one-bearing-out cross-validation (LOOCV), and three-seed random time-step splits. On XJTU-SY, piecewise labels increase LOOCV $R^2$ by $0.20$--$0.23$, while random splitting adds little. On PHM2012 and IMS, random splitting raises $R^2$ from negative values or $0.17$--$0.25$ under linear LOOCV to $0.70$--$0.86$ under piecewise random splitting, especially on datasets with stronger cross-bearing distribution shifts. The reproduced protocol family shows large protocol-induced inflation, but it does not reach the $R^2>0.99$ magnitude of any specific publication. In all twelve model-dataset cells, every piecewise random-split run exceeded every linear-LOOCV fold (Cliff's delta $=1.0$). Reported high scores in this protocol family are consistent with within-trajectory dependence and interpolation, but they do not prove that every published near-perfect result is caused by the protocol. We report per-fold results, 95\% confidence intervals, effect sizes, RMSE, MAE, split-ratio sensitivity, and convergence epochs, and we propose a four-component STAR framework: continuous labels, leave-one-bearing-out cross-validation, constant baselines, and multi-model reporting.}
 
-\begin{keyword}
-RUL Prediction \sep Bearing Prognostics \sep Evaluation Methodology \sep Labeling Bias \sep Temporal Splitting \sep Reproducibility
-\end{keyword}
+\keywords{RUL Prediction, Bearing Prognostics, Evaluation Methodology, Labeling Bias, Temporal Splitting, Reproducibility}
 
-\end{frontmatter}
+\maketitle
 
 \section{Introduction}
 Rolling bearings are critical components in rotating machinery, and accurate prediction of their remaining useful life (RUL) supports maintenance scheduling and failure prevention. In recent years, deep learning methods have reported high $R^2$ values on public bearing datasets \cite{rul_lstm_uq_2022,reg_lstm_2021,gru_tim_2021,transformer_tim_2023}. Most of these studies share two evaluation practices: piecewise linear labels with an 80\% plateau and random splitting of sliding-window samples across the full life trajectory.
@@ -267,7 +255,6 @@ Table~\ref{tab:sensitivity} reports TCN results under piecewise labels for the t
 \caption{TCN split sensitivity with piecewise labels. Random rows are mean [min--max] over seeds 42, 43, 44; time-block uses chronological 70/15/15 per bearing.}
 \label{tab:sensitivity}
 \small
-\resizebox{\columnwidth}{!}{%
 \begin{tabular}{llc}
 \toprule
 Dataset & Split & $R^2$ \\
@@ -284,7 +271,7 @@ IMS & Random 60/20/20 & 0.703 [0.698; 0.708] \\
  & Random 80/10/10 & 0.720 [0.716; 0.727] \\
  & Time-block 70/15/15 & $-7.991$ \\
 \bottomrule
-\end{tabular}}
+\end{tabular}
 \end{table}
 
 \subsection{Protocol-Level Reproduction and Its Boundary}
@@ -340,12 +327,12 @@ An adaptive debiased label that shortens the plateau and smooths the transition 
 
 Table~\ref{tab:star} summarizes the template as an auditable checklist. The checklist is derived from the violations and controls observed in the reproduced protocol family rather than from generic best-practice recommendations.
 
-\begin{table}[t]
+\begin{table*}[t]
 \centering
 \caption{STAR evaluation template used as an auditable reporting checklist.}
 \label{tab:star}
 \small
-\resizebox{\columnwidth}{!}{%
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{lll}
 \toprule
 Component & Minimum requirement & Status in this study \\
@@ -356,16 +343,16 @@ Anchor baseline & Constant predictor reported as floor & Included \\
 Reporting completeness & Per-fold results, CI, RMSE, MAE, seeds & Included \\
 \bottomrule
 \end{tabular}}
-\end{table}
+\end{table*}
 
 Table~\ref{tab:star_before_after} shows the contrast between conventional reporting patterns and the STAR requirements. The comparison makes the template actionable: a reader can check each row against a submitted benchmark and see which part of the evaluation protocol is missing.
 
-\begin{table}[t]
+\begin{table*}[t]
 \centering
 \caption{Conventional reporting patterns versus STAR requirements.}
 \label{tab:star_before_after}
 \small
-\resizebox{\columnwidth}{!}{%
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{lll}
 \toprule
 Aspect & Conventional pattern & STAR requirement \\
@@ -376,7 +363,7 @@ Baseline & Constant predictor often omitted & Constant predictor reported \\
 Reporting & Final $R^2$ only & Per-fold, CI, RMSE, MAE, seeds \\
 \bottomrule
 \end{tabular}}
-\end{table}
+\end{table*}
 
 \subsection{Limitations}
 We did not reproduce exact published checkpoints because public code was unavailable. IMS has only three held-out test sets, so its confidence intervals are wide; we therefore treat IMS as directional evidence. The external datasets use the same statistical feature pipeline rather than each paper's raw-signal preprocessing. PU is not used because it does not provide run-to-failure trajectories. We do not provide a quantitative prevalence survey in this version; protocol-level claims are limited to the reproduced protocol family. Future work should run exact published pipelines when code becomes available and extend STAR to raw-signal and uncertainty-aware models.
@@ -384,19 +371,21 @@ We did not reproduce exact published checkpoints because public code was unavail
 \section{Conclusion}
 With converged training on XJTU-SY, PHM2012, and IMS, the combination of piecewise labels and random time-step splitting consistently produces higher $R^2$ than linear-label LOOCV, with Cliff's delta $=1.0$ for the protocol effect in all twelve model-dataset cells. The reproduced protocol family produces $R^2$ values of $0.70$--$0.86$, which are much higher than LOOCV but below the $R^2>0.99$ range reported by some papers. Our results are therefore consistent with the view that evaluation protocol plays a major role in reported RUL performance, while exact near-perfect values still require exact reproduction of the original models and preprocessing. We recommend that journals consider requiring STAR-style reporting templates so that future improvements are measured against a meaningful baseline.
 
-\section*{CRediT Authorship Contribution Statement}
-Zhongkuan Ma: Conceptualization, Methodology, Software, Validation, Formal analysis, Writing - Original Draft, Writing - Review \& Editing.
+\backmatter
 
-\section*{Declaration of Competing Interest}
-The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+\bmhead{Supplementary information}
+Supplementary material includes preprocessing scripts, converged training and split sensitivity runners, per-fold and per-seed JSON results, table/figure generators, and additional protocol details.
 
-\section*{Funding}
-This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.
-
-\section*{Data and Code Availability}
-The XJTU-SY, PHM2012, and IMS datasets are publicly available from their original sources. The reproducibility package is provided as supplementary files and contains preprocessing scripts, converged training and split sensitivity runners, per-fold and per-seed JSON results, table/figure generators, and this manuscript. The code repository is available at \url{https://github.com/KKK-cell441/rul-evaluation-star} and archived at \url{https://doi.org/10.5281/zenodo.21866359}.
-
-\bibliographystyle{elsarticle-num}
+\section*{Declarations}
+\begin{itemize}
+\item Funding: This research received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors.
+\item Conflict of interest: The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+\item Ethics approval and consent to participate: Not applicable.
+\item Consent for publication: Not applicable.
+\item Data availability: The XJTU-SY, PHM2012, and IMS datasets are publicly available from their original sources.
+\item Code availability: The reproducibility package is available at \url{https://github.com/KKK-cell441/rul-evaluation-star} and archived at \url{https://doi.org/10.5281/zenodo.21866359}.
+\item Author contribution: Zhongkuan Ma: Conceptualization, Methodology, Software, Validation, Formal analysis, Writing - Original Draft, Writing - Review \& Editing.
+\end{itemize}
 
 \begin{thebibliography}{99}
 

@@ -3,10 +3,11 @@
 ## Manuscript
 
 - Title: Revisiting Evaluation Protocols for Bearing Remaining Useful Life Prediction: The Effects of Labeling and Temporal Splitting Across Multiple Datasets
-- File: `manuscript_revised_v7.pdf`
-- Source: `manuscript_revised_v7.tex`
-- Pages: 8
-- Template: currently Elsevier elsarticle; must convert to Springer sn-jnl for JIM
+- File: `manuscript_revised_v7_jim.pdf`
+- Source: `manuscript_revised_v7_jim.tex`
+- Pages: 14
+- Template: Springer sn-jnl (conversion complete)
+- Elsevier source version: `manuscript_revised_v7.pdf` / `manuscript_revised_v7.tex`
 
 ## Author
 
@@ -29,6 +30,10 @@
 
 - [x] `manuscript_revised_v7.pdf`
 - [x] `manuscript_revised_v7.tex`
+- [x] `manuscript_revised_v7_jim.pdf`
+- [x] `manuscript_revised_v7_jim.tex`
+- [x] `sn-jnl.cls`
+- [x] `sn-mathphys-num.bst`
 - [x] `README.md`
 - [x] `Highlights.md`
 - [x] `Cover_Letter_Measurement.md`
@@ -46,4 +51,4 @@
 
 ## JIM-Specific Note
 
-JIM is a Springer journal. Before submission, convert `manuscript_revised_v7.tex` to the Springer `sn-jnl` template and update the journal title.
+JIM is a Springer journal. The manuscript has been converted to the Springer `sn-jnl` template; `manuscript_revised_v7_jim.pdf` is the submission-ready build.
