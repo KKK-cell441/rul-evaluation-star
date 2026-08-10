@@ -10,7 +10,7 @@ for consideration in *Measurement*.
 
 This manuscript addresses an under-examined methodological issue: whether reported bearing remaining useful life (RUL) improvements reflect model capability or evaluation design. The paper does not propose a new diagnostic network. Instead, it evaluates the combined effects of label construction and temporal splitting under a controlled protocol comparison. The contribution is to establish reproducible evaluation protocols and improve comparability across bearing RUL studies, not to critique specific published results.
 
-We use a complete 2x2 factorial design on three public datasets (XJTU-SY, PHM2012, and IMS) with four model classes (Linear Regression, LSTM, TCN, and PatchTST), a constant predictor baseline, leave-one-bearing-out cross-validation, random time-step splitting, and three-seed repeated runs. We report R2, RMSE, MAE, 95% confidence intervals, and Cliff's delta.
+We use a complete 2x2 factorial design on three public datasets (XJTU-SY, PHM2012, and IMS) with four model classes (Linear Regression, LSTM, TCN, and PatchTST), a constant predictor baseline, leave-one-bearing-out cross-validation, random time-step splitting, and eight-seed repeated runs (42-49). We report R2, RMSE, MAE, 95% confidence intervals, exact permutation tests, and Cliff's delta.
 
 The key finding is that evaluation protocol can substantially alter reported performance. In particular, random window splitting evaluates within-trajectory interpolation rather than new-bearing generalization, and its effect interacts with label construction. From a Measurement perspective, this is a study of the reliability of measurement results and benchmark protocol design: reported performance cannot be interpreted without a clearly specified cross-bearing evaluation protocol. The paper therefore focuses on reproducible evaluation, comparability across studies, and the uncertainty of reported performance.
 
@@ -27,4 +27,4 @@ Thank you for your consideration.
 
 Sincerely,
 Zhongkuan Ma
-202421270@nefu.edu.cn
+2024212760@nefu.edu.cn
