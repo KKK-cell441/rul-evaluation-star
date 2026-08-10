@@ -31,7 +31,7 @@
 - Quantitative prevalence survey counts are not used as evidence in the manuscript.
 
 ## STAR audit evidence
-- `fulltexts/P03.pdf`: publicly available IEEE Access full text used for the verified STAR example in Appendix A.
+- `fulltexts/P02.pdf`, `P03.pdf`, `P05.pdf`, `P06.pdf`, `P16.pdf`: publicly available journal full texts used for the verified STAR examples in Appendix A.
 - `prevalence_survey_coding_sheet.csv`: coding sheet with candidate studies and three-level audit status (reported / unclear / unavailable).
 - `prevalence_survey_candidates.md`, `prevalence_survey.md`, and `supplementary_prevalence_survey.tex/pdf`: candidate list and survey template.
-- The Appendix A row corresponds to Q. Wu and C. Zhang, IEEE Access, 2020, DOI 10.1109/ACCESS.2020.2970444; protocol coding is Leave-one-bearing-out, linear reliability rate, anchor baseline unavailable, reporting completeness unavailable.
+- Appendix A rows are completed only when the protocol can be verified from the audited full text.

@@ -377,11 +377,11 @@ With converged training on XJTU-SY, PHM2012, and IMS, the combination of piecewi
 \section{STAR-Based Reporting Audit Template}
 To support transparent reporting without judging individual studies, the STAR checklist can be recorded as \emph{reported}, \emph{unclear}, or \emph{unavailable}. \emph{Reported} means that the item is explicitly described in the audited full text; \emph{unclear} means that the description is incomplete or ambiguous; \emph{unavailable} means that the information could not be verified from the audited source. The purpose is to make reporting choices visible, not to classify studies as valid or invalid.
 
-Table~\ref{tab:star_audit} illustrates the audit sheet with one verified example based on the cited full text \cite{wu2020cascade}. The audited article is publicly available through IEEE Access. The coding sheet uses the same three-level vocabulary for candidate studies; rows should be completed only after full-text verification.
+Table~\ref{tab:star_audit} illustrates the audit sheet with five verified examples based on the cited full texts \cite{wu2020cascade,yang2024cnnvaembilstm,wen2024envelope,li2022twostage,li2022soasvm}. The audited articles are publicly available through their journals. The coding sheet uses the same three-level vocabulary for candidate studies; rows should be completed only after full-text verification.
 
 \begin{table*}[t]
 \centering
-\caption{Illustrative STAR-based reporting audit. Entries record what can be verified from the audited full text and are not correctness judgments.}
+\caption{Illustrative STAR-based reporting audit. Entries record what can be verified from the audited full texts and are not correctness judgments.}
 \label{tab:star_audit}
 \small
 \resizebox{\textwidth}{!}{%
@@ -390,6 +390,11 @@ Table~\ref{tab:star_audit} illustrates the audit sheet with one verified example
 Study & Dataset & Split & Target construction & Anchor baseline & Reporting completeness \\
 \midrule
 Wu and Zhang \cite{wu2020cascade} & PHM2012 & Leave-one-bearing-out & Linear reliability rate & Unavailable & Unavailable \\
+Wu and Zhang \cite{wu2020cascade} & PHM2012 & Leave-one-bearing-out & Linear reliability rate & Unavailable & Unavailable \\
+Yang et al. \cite{yang2024cnnvaembilstm} & Industrial weaving-machine case & Bearing-level 70/30 train/test & Normalized RUL (construction details unclear) & Unavailable & Data not public; no code \\
+Wen et al. \cite{wen2024envelope} & XJTU-SY & Leave-one-bearing-out within condition & Piecewise linear RUL (plateau unclear) & Unavailable & Dataset available; no code \\
+Li et al. \cite{li2022twostage} & PHM2012 & Cross-condition bearing holdout & Health percentage after IF (pre-IF plateau) & Unavailable & Data on request; no code \\
+Li et al. \cite{li2022soasvm} & IMS & Within-trajectory parity 1:1 & PCA degradation index & Unavailable & Data in article; no code \\
 \bottomrule
 \end{tabular}}
 \end{table*}
@@ -441,6 +446,26 @@ Z. Que, X. Jin, and Z. Xu,
 Q. Wu and C. Zhang,
 ``Cascade fusion convolutional long-short time memory network for remaining useful life prediction of rolling bearing,''
 \textit{IEEE Access}, vol.~8, pp.~32957--32965, 2020. doi:10.1109/access.2020.2970444.
+
+\bibitem{yang2024cnnvaembilstm}
+L. Yang, Y. Jiang, K. Zeng, and T. Peng,
+``Rolling bearing remaining useful life prediction based on CNN-VAE-MBiLSTM,''
+\textit{Sensors}, vol.~24, no.~10, p.~2992, 2024. doi:10.3390/s24102992.
+
+\bibitem{wen2024envelope}
+H. Wen, L. Zhang, and J. K. Sinha,
+``From envelope spectra to bearing remaining useful life: An intelligent vibration-based prediction model with quantified uncertainty,''
+\textit{Sensors}, vol.~24, no.~22, p.~7257, 2024. doi:10.3390/s24227257.
+
+\bibitem{li2022twostage}
+X. Li, K. Zhang, W. Li, Y. Feng, and R. Liu,
+``A two-stage transfer regression convolutional neural network for bearing remaining useful life prediction,''
+\textit{Machines}, vol.~10, no.~5, p.~369, 2022. doi:10.3390/machines10050369.
+
+\bibitem{li2022soasvm}
+X. Li, S. An, Y. Shi, and Y. Huang,
+``Remaining useful life estimation of rolling bearing based on SOA-SVM algorithm,''
+\textit{Machines}, vol.~10, no.~9, p.~729, 2022. doi:10.3390/machines10090729.
 
 \bibitem{transformer_tim_2023}
 H. Peng, B. Jiang, Z. Mao, and S. Liu,
