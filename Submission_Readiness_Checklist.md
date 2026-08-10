@@ -46,7 +46,7 @@
 - [ ] Confirm ORCID and author details in the online submission system.
 - [ ] Confirm exact dataset versions and download dates.
 - [ ] Confirm publisher-specific declarations in the online form.
-- [ ] Release the STAR audit coding sheet and `fulltexts/P03.pdf` in the public GitHub/Zenodo package.
+- [x] Publish the STAR audit coding sheet and `fulltexts/P03.pdf` in the public GitHub package.
 - [ ] If a new Zenodo DOI is generated after the supplementary release, update the manuscript DOI.
 - [ ] No further experiments or model additions planned.
 
