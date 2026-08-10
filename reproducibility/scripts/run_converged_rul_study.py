@@ -358,7 +358,7 @@ def run_random_seed(datasets, model_name, seed, max_epochs):
     return evaluate_predictions(test_true, test_pred, np.abs(val_true - val_pred))
 
 
-def run_random(datasets, model_name, max_epochs, random_seeds=(42, 43, 44)):
+def run_random(datasets, model_name, max_epochs, random_seeds=(42, 43, 44, 45, 46, 47, 48, 49)):
     reps = []
     best_epochs = []
     for seed in random_seeds:
@@ -390,7 +390,7 @@ def main():
     parser.add_argument("--models", nargs="+", default=["Constant", "LinearRegression", "StatLSTM", "TCN", "PatchTST"])
     parser.add_argument("--labels", nargs="+", default=["linear", "piecewise"])
     parser.add_argument("--epochs", type=int, default=100)
-    parser.add_argument("--random-seeds", nargs="+", type=int, default=[42, 43, 44])
+    parser.add_argument("--random-seeds", nargs="+", type=int, default=[42, 43, 44, 45, 46, 47, 48, 49])
     parser.add_argument("--output", type=str, required=True)
     args = parser.parse_args()
 
