@@ -4,13 +4,13 @@ import itertools
 
 import numpy as np
 
-BASE = Path.home() / "Documents" / "\u673a\u5668\u5b66\u4e60" / "RUL-Prediction-Framework" / "results"
+BASE = Path(__file__).resolve().parents[1] / "results"
 FILES = {
     "XJTU-SY": "converged_xjtu8_v1.json",
     "PHM2012": "converged_phm_v1.json",
     "IMS": "converged_ims_v1.json",
 }
-MODELS = ["LinearRegression", "StatLSTM", "TCN"]
+MODELS = ["LinearRegression", "StatLSTM", "TCN", "PatchTST"]
 
 
 def load():
