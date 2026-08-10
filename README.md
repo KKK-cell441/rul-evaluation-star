@@ -2,7 +2,7 @@
 
 Reproducibility package for the manuscript:
 
-**Revisiting Evaluation Protocols for Bearing Remaining Useful Life Prediction: Evidence of Split and Label Effects Across Multiple Datasets**
+**Revisiting Evaluation Protocols for Bearing Remaining Useful Life Prediction: The Effects of Labeling and Temporal Splitting Across Multiple Datasets**
 
 ## Contents
 

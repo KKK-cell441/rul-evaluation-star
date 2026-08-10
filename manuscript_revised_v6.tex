@@ -22,18 +22,18 @@
 
 \begin{frontmatter}
 
-\title{Revisiting Evaluation Protocols for Bearing Remaining Useful Life Prediction: Evidence of Split and Label Effects Across Multiple Datasets}
+\title{Revisiting Evaluation Protocols for Bearing Remaining Useful Life Prediction: The Effects of Labeling and Temporal Splitting Across Multiple Datasets}
 
 \author[1]{Zhongkuan Ma\corref{cor1}}
 \ead{202421270@nefu.edu.cn}
 \cortext[cor1]{Corresponding author. ORCID: 0009-0003-4491-6619}
 
 \begin{abstract}
-Bearing remaining useful life (RUL) studies frequently report near-perfect $R^2$ values by combining piecewise linear labels with an 80\% plateau and random time-step splitting. We evaluate this protocol under converged training on three public datasets (XJTU-SY, PHM2012, IMS) with Linear Regression, LSTM, TCN, PatchTST, a constant predictor baseline, leave-one-bearing-out cross-validation (LOOCV), and three-seed random time-step splits. On XJTU-SY, piecewise labels increase LOOCV $R^2$ by $0.20$--$0.23$, while random splitting adds little. On PHM2012 and IMS, random splitting raises $R^2$ from negative values or $0.17$--$0.25$ under linear LOOCV to $0.70$--$0.86$ under piecewise random splitting. This demonstrates large protocol-induced inflation in the reproduced protocol family, but it does not reproduce the $R^2>0.99$ magnitude of any specific publication. In all twelve model-dataset cells, every piecewise random-split run exceeded every linear-LOOCV fold (Cliff's delta $=1.0$). The results are consistent with the hypothesis that reported high scores are strongly affected by within-trajectory leakage, but they do not prove that every published near-perfect result is caused by the protocol. We report per-fold results, 95\% confidence intervals, effect sizes, RMSE, MAE, split-ratio sensitivity, and convergence epochs, and we propose a four-component STAR framework: continuous labels, leave-one-bearing-out cross-validation, constant baselines, and multi-model reporting.
+Bearing remaining useful life (RUL) studies frequently report near-perfect $R^2$ values by combining piecewise linear labels with an 80\% plateau and random time-step splitting. We evaluate this protocol under converged training on three public datasets (XJTU-SY, PHM2012, IMS) with Linear Regression, LSTM, TCN, PatchTST, a constant predictor baseline, leave-one-bearing-out cross-validation (LOOCV), and three-seed random time-step splits. On XJTU-SY, piecewise labels increase LOOCV $R^2$ by $0.20$--$0.23$, while random splitting adds little. On PHM2012 and IMS, random splitting raises $R^2$ from negative values or $0.17$--$0.25$ under linear LOOCV to $0.70$--$0.86$ under piecewise random splitting. This demonstrates large protocol-induced inflation in the reproduced protocol family, but it does not reproduce the $R^2>0.99$ magnitude of any specific publication. In all twelve model-dataset cells, every piecewise random-split run exceeded every linear-LOOCV fold (Cliff's delta $=1.0$). The results are consistent with the hypothesis that reported high scores are strongly affected by within-trajectory dependence and interpolation, but they do not prove that every published near-perfect result is caused by the protocol. We report per-fold results, 95\% confidence intervals, effect sizes, RMSE, MAE, split-ratio sensitivity, and convergence epochs, and we propose a four-component STAR framework: continuous labels, leave-one-bearing-out cross-validation, constant baselines, and multi-model reporting.
 \end{abstract}
 
 \begin{keyword}
-RUL Prediction \sep Bearing Prognostics \sep Evaluation Methodology \sep Labeling Bias \sep Data Leakage \sep Reproducibility
+RUL Prediction \sep Bearing Prognostics \sep Evaluation Methodology \sep Labeling Bias \sep Temporal Splitting \sep Reproducibility
 \end{keyword}
 
 \end{frontmatter}
@@ -56,7 +56,7 @@ We contribute:
 Recent bearing RUL studies frequently combine piecewise linear labels with an 80\% plateau and random time-step splitting. We do not report a quantitative literature survey in this version. Instead, we directly evaluate these two protocol choices under controlled experiments on three public datasets, so the claims remain auditable through the reported results and reproducibility package.
 
 \section{Related Work}
-Data-driven RUL prediction has advanced through CNNs, recurrent networks, and attention-based models \cite{li2020multiscale,zhang2020lstm,mo2022transformer}. The focus has mostly been on architecture design, while evaluation protocols remain heterogeneous. Reviews note the absence of standardized benchmarks \cite{zhao2021deep,caesarendra2021machine}. Recent studies also identify temporal leakage as a general machine learning problem in time-series and ecological applications \cite{leakage_nature,leakage_frontiers}.
+Data-driven RUL prediction has advanced through CNNs, recurrent networks, and attention-based models \cite{li2020multiscale,zhang2020lstm,mo2022transformer}. The focus has mostly been on architecture design, while evaluation protocols remain heterogeneous. Reviews note the absence of standardized benchmarks \cite{zhao2021deep,caesarendra2021machine}. Recent studies also identify within-trajectory dependence and split-induced interpolation as general problems in time-series and ecological applications \cite{leakage_nature,leakage_frontiers}.
 
 The methodological gap is not simply the choice of model. It is whether reported scores measure prediction for new bearings or interpolation within the same bearing. Our study measures both on the same preprocessing, models, seeds, and metrics.
 
@@ -64,11 +64,11 @@ The methodological gap is not simply the choice of model. It is whether reported
 \subsection{Datasets}
 We use three public run-to-failure datasets:
 \begin{itemize}
-    \item \textbf{XJTU-SY} \cite{xjtusy2019dataset}: 8 run-to-failure bearings from conditions 1 and 2, yielding 15,928 windows.
+    \item \textbf{XJTU-SY} \cite{xjtusy2019dataset}: 8 run-to-failure bearings (Bearing1\_1 through Bearing1\_5 and Bearing2\_1 through Bearing2\_3) from conditions 1 and 2, yielding 15,928 windows.
     \item \textbf{PHM2012} \cite{nectoux2012pronostia}: 6 learning-set bearings, yielding 7,534 windows.
-    \item \textbf{IMS} \cite{ims2006}: 3 run-to-failure test sets, yielding 75,712 windows.
+    \item \textbf{IMS} \cite{ims2006}: 3 run-to-failure test sets (first, second, and fourth), yielding 75,712 windows.
 \end{itemize}
-The PU dataset is a benchmark for fault classification rather than full run-to-failure RUL trajectories, so it is not used for RUL label generation. Each vibration signal is segmented into windows of 2,560 samples. Ten statistical and spectral features are extracted per window, and a history length of 10 windows is used for LSTM and TCN inputs.
+The PU dataset is a benchmark for fault classification rather than full run-to-failure RUL trajectories, so it is not used for RUL label generation. Each vibration signal is segmented into non-overlapping windows of 2,560 samples; the stride therefore equals the window length. Ten statistical and spectral features are extracted per window, and a history length of 10 windows is used for LSTM, TCN, and PatchTST inputs. History sequences are constructed within each bearing before splitting, so a random split can place temporally adjacent sequences from the same trajectory in both training and test sets; cross-bearing LOOCV avoids this overlap by construction. Feature normalization parameters are estimated from the training split only and applied to validation and test splits.
 
 \subsection{Labels and Evaluation Protocols}
 We compare two label families:
@@ -85,7 +85,7 @@ We compare two label families:
 \label{eq:piecewise}
 \end{equation}
 
-The primary honest protocol is linear labels with leave-one-bearing-out cross-validation (LOOCV). For each test bearing, one other bearing is used for validation, and the remaining bearings are used for training. The dominant published protocol is reproduced as piecewise labels with a 70\%/15\%/15\% random time-step split over all windows.
+The primary cross-bearing evaluation protocol is linear labels with leave-one-bearing-out cross-validation (LOOCV). For each test bearing, one other bearing is used for validation, and the remaining bearings are used for training. The dominant published protocol is reproduced as piecewise labels with a 70\%/15\%/15\% random time-step split over all windows.
 
 \subsection{Models and Training}
 We use four learned model classes:
@@ -93,7 +93,7 @@ We use four learned model classes:
     \item \textbf{Linear Regression} on the 10 extracted features;
     \item \textbf{LSTM}: two-layer LSTM with 128 hidden units;
     \item \textbf{TCN}: dilated temporal convolutional network with channel widths $32 \to 64 \to 128$.
-    \item \textbf{PatchTST}: patch-based time-series transformer with patch length 4, stride 2, embedding dimension 64, four attention heads, and three encoder layers.
+    \item \textbf{PatchTST} \cite{patchtst2023}: patch-based time-series transformer with patch length 4, stride 2, embedding dimension 64, four attention heads, and three encoder layers.
 \end{itemize}
 A constant predictor baseline, which always outputs the mean training RUL, is reported as the reference floor.
 
@@ -117,7 +117,7 @@ To check whether the random-split result depends on the specific 70/15/15 ratio,
     \item 60\%/20\%/20\%;
     \item 80\%/10\%/10\%.
 \end{itemize}
-We also implement a chronological time-block split at 70\%/15\%/15\%: each bearing trajectory is split by time, with the first 70\% of windows used for training, the next 15\% for validation, and the final 15\% for testing. This removes random interleaving while still training on the same bearing as the test set.
+We also implement a chronological time-block split at 70\%/15\%/15\%: each bearing trajectory is split by time, with the first 70\% of windows used for training, the next 15\% for validation, and the final 15\% for testing. This removes random interleaving while still training on the same bearing as the test set. Chronological evaluation also involves temporal extrapolation and degradation-stage imbalance, so the negative $R^2$ values should be interpreted as a combination of these factors rather than as a pure leakage measurement.
 
 \section{Results}
 \subsection{Main Results}
@@ -153,7 +153,7 @@ IMS & Linear Reg. & $-2.109$ [$-5.677$; 1.459] & $-4.586$ [$-25.477$; 16.305] & 
 \end{tabular}}
 \end{table*}
 
-Because $R^2$ can be negative and is less interpretable under severe cross-bearing distribution shift, Table~\ref{tab:errors} additionally reports RMSE and MAE for the primary honest protocol (linear labels, LOOCV) and the reproduced dominant protocol (piecewise labels, random split). These absolute-error metrics confirm the same direction as the $R^2$ results: the protocol change substantially reduces prediction error even when the LOOCV $R^2$ is negative.
+Because $R^2$ can be negative and is less interpretable under severe cross-bearing distribution shift, Table~\ref{tab:errors} additionally reports RMSE and MAE for the primary cross-bearing protocol (linear labels, LOOCV) and the reproduced dominant protocol (piecewise labels, random split). These absolute-error metrics confirm the same direction as the $R^2$ results: the protocol change substantially reduces prediction error even when the LOOCV $R^2$ is negative.
 
 \begin{table*}[t]
 \centering
@@ -194,7 +194,7 @@ IMS & Linear Reg. & $-2.109$ & 0.498 & 0.427 & 0.320 & 0.197 & 0.127 \\
 The constant predictor has $R^2 \approx 0.000$ on every dataset and label family. Several linear-LOOCV results are below this floor, especially on IMS, where a model must extrapolate across different test rigs and fault modes. This is not a numerical artifact: it shows that cross-bearing generalization is the real challenge. Random time-step splitting hides this failure because test windows come from the same bearings and nearby temporal positions as training windows.
 
 \subsection{Split Sensitivity Results}
-Table~\ref{tab:sensitivity} reports TCN results under piecewise labels for the two additional random ratios and the chronological time-block split. The random-ratio results are stable: 60/20/20 and 80/10/10 both remain high, in the same range as the main 70/15/15 result. In contrast, chronological time-block splitting produces large negative $R^2$ on all three datasets. This confirms that the inflation is not an artifact of one particular random ratio; it comes from random interleaving of windows from the same trajectories.
+Table~\ref{tab:sensitivity} reports TCN results under piecewise labels for the two additional random ratios and the chronological time-block split. The random-ratio results are stable: 60/20/20 and 80/10/10 both remain high, in the same range as the main 70/15/15 result. In contrast, chronological time-block splitting produces large negative $R^2$ on all three datasets. The contrast indicates that the random-split inflation is not an artifact of one particular random ratio; it is consistent with within-trajectory interpolation. The negative chronological results should not be read as a pure leakage effect because temporal extrapolation and degradation-stage imbalance also contribute.
 
 \begin{table}[t]
 \centering
@@ -224,17 +224,17 @@ IMS & Random 60/20/20 & 0.703 [0.698; 0.708] \\
 \subsection{Protocol-Level Reproduction and Its Boundary}
 We reproduced the protocol family used by many published high-scoring papers: piecewise 80\% plateau labels, random time-step splitting, converged deep training, and standard statistical features. Under this protocol, deep models reach $R^2$ values of $0.70$--$0.86$ on PHM2012 and IMS, substantially above the linear-LOOCV values.
 
-We do not reproduce $R^2>0.99$. The accurate statement is that the inflation phenomenon is reproducible at the protocol level, but the magnitude in our reproduced protocol family does not reach the near-perfect range reported by some papers. Public code and checkpoints were not available in our environment for the cited papers, so exact reproduction is not possible. We therefore do not claim that all published near-perfect values are explained by evaluation design; our results are consistent with the hypothesis that within-trajectory leakage is a major contributor.
+We do not reproduce $R^2>0.99$. The accurate statement is that the inflation phenomenon is reproducible at the protocol level, but the magnitude in our reproduced protocol family does not reach the near-perfect range reported by some papers. Public code and checkpoints were not available in our environment for the cited papers, so exact reproduction is not possible. We therefore do not claim that all published near-perfect values are explained by evaluation design; our results are consistent with the hypothesis that within-trajectory dependence and interpolation are major contributors.
 
 \section{Discussion}
-\subsection{Why Random Splitting Inflates RUL Scores}
-Sliding windows from one bearing are strongly autocorrelated. A random split places test windows from the same trajectory in the training set, so the model can interpolate across almost identical operating phases. Under LOOCV, the test bearing is completely absent during training. The large gaps on PHM2012 and IMS show that the problem is primarily temporal leakage rather than model capacity.
+\subsection{Random Splitting Measures Within-Trajectory Interpolation}
+Sliding windows from one bearing are strongly autocorrelated. A random split places test windows from the same trajectory in the training set, so the model can interpolate across almost identical operating phases. Under LOOCV, the test bearing is completely absent during training. The large gaps on PHM2012 and IMS show that the problem is primarily within-trajectory interpolation relative to the intended cross-bearing prediction task, rather than model capacity.
 
 Piecewise labels matter for a second reason: the 80\% plateau makes the label almost constant for most of life. On XJTU-SY, this improves apparent regression performance because the model only needs to recognize the transition region. On PHM2012 and IMS, the plateau can also interact with distribution shift and produce poor LOOCV results. The two practices should be reported separately, not combined into one inflation multiplier.
 Although $R^2$ reflects explained variance, MAE and RMSE quantify absolute prediction deviations. Table~\ref{tab:errors} confirms that the protocol effect is not an artifact of the $R^2$ scale: the piecewise-random protocol consistently reduces RMSE and MAE relative to the linear-LOOCV protocol across all three datasets.
 
 \subsection{STAR Framework}
-We propose the STAR template:
+We propose the STAR template, which stands for Split integrity, Target integrity, Anchor baseline, and Reporting completeness. In this paper these map to:
 \begin{enumerate}
     \item \textbf{Continuous labels}: linear or physics-guided labels as the primary target; plateau parameters must be justified if retained.
     \item \textbf{Leave-one-bearing-out cross-validation}: no training window from the test bearing, with per-fold reporting.
@@ -359,6 +359,11 @@ J. A. Long, J. F. Levesque, and D. L. Huffman,
 S. M. Lundberg and S.-I. Lee,
 ``A unified approach to interpreting model predictions,''
 in \textit{Proc. NeurIPS}, vol.~30, 2017.
+
+\bibitem{patchtst2023}
+Y. Nie, N. H. Nguyen, P. Sinthong, and J. Kalagnanam,
+``A time series is worth 64 words: Long-term forecasting with transformers,''
+in \textit{Proc. Int. Conf. Learn. Represent.}, 2023.
 
 \end{thebibliography}
 
