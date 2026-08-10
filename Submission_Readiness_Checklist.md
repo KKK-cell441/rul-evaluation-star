@@ -47,7 +47,7 @@
 ## Remaining Before Submission
 
 - [ ] Confirm ORCID and author details in the online submission system.
-- [ ] Push v15 manuscript and all v14/v15 reproducibility result files to GitHub `main`.
+- [x] Push v15 manuscript and all v14/v15 reproducibility result files to GitHub `main`.
 - [ ] Create a new Zenodo release for the v15 package and update the manuscript DOI if it changes.
 - [ ] Confirm exact dataset versions and download dates.
 - [ ] Confirm publisher-specific declarations in the online form.
