@@ -22,7 +22,7 @@
 
 \begin{frontmatter}
 
-\title{Revisiting Evaluation Protocols for Bearing Remaining Useful Life Prediction: The Effects of Labeling and Temporal Splitting Across Multiple Datasets}
+\title{Revisiting Evaluation Protocols for Bearing Remaining Useful Life Prediction: A Multi-Dataset Study of Labeling and Temporal Split Effects}
 
 \author[1]{Zhongkuan Ma\corref{cor1}}
 \ead{2024212760@nefu.edu.cn}
@@ -40,7 +40,7 @@ RUL Prediction \sep Bearing Prognostics \sep Evaluation Methodology \sep Labelin
 
 \section{Introduction}
 Rolling bearings are critical components in rotating machinery, and accurate prediction of their remaining useful life (RUL) supports maintenance scheduling and failure prevention. In recent years, deep learning methods have reported high $R^2$ values on public bearing datasets \cite{rul_lstm_uq_2022,reg_lstm_2021,gru_tim_2021,transformer_tim_2023}. Most of these studies share two evaluation practices: piecewise linear labels with an 80\% plateau and random splitting of sliding-window samples across the full life trajectory.
-These choices are not merely reporting details; they define different prediction tasks. A piecewise label with an 80\% plateau holds most of a trajectory at one target value, which turns much of the regression into a transition-detection problem. A random split of sliding windows can put temporally adjacent samples from the same bearing on both sides of the training/test boundary, which makes the test task an interpolation on a trajectory the model has already seen. When both choices appear together, a benchmark can report high performance without showing whether the model predicts degradation for a new bearing. This study separates those two effects empirically.
+In practical manufacturing systems, RUL models are expected to generalize across different assets rather than interpolate previously observed degradation trajectories. These choices are not merely reporting details; they define different prediction tasks. A piecewise label with an 80\% plateau holds most of a trajectory at one target value, which turns much of the regression into a transition-detection problem. A random split of sliding windows can put temporally adjacent samples from the same bearing on both sides of the training/test boundary, which makes the test task an interpolation on a trajectory the model has already seen. When both choices appear together, a benchmark can report high performance without showing whether the model predicts degradation for a new bearing. This study separates those two effects empirically.
 
 A previous version of this study used a fast five-epoch protocol on XJTU-SY only. That protocol was insufficient for comparison with published models trained to convergence. This revision replaces that protocol with converged training, adds PHM2012 and IMS, and reports split-ratio sensitivity.
 
@@ -50,7 +50,7 @@ We contribute:
     \item per-fold results, 95\% confidence intervals, bounded effect sizes, RMSE, and MAE for all model-dataset combinations;
     \item protocol-level reproduction of the inflation phenomenon associated with the dominant evaluation design, with explicit caveats about the reproduced $R^2$ range;
     \item random split-ratio and chronological time-block sensitivity analysis;
-    \item a standardized STAR evaluation template with continuous labels, per-bearing holdout, constant baselines, and multi-model reporting.
+\item an auditable STAR evaluation template with continuous labels, per-bearing holdout, constant baselines, and multi-model reporting.
 \end{enumerate}
 
 \section{Motivating Protocol Choices}
@@ -329,7 +329,7 @@ A benchmark result is interpretable only when the following items are reported t
 These items are not independent. A random split can inflate $R^2$ even when the model is unchanged, so the split must be reported before the score is interpreted. The same applies to label construction. The STAR template in the next subsection turns this reporting requirement into a reusable checklist.
 
 \subsection{STAR Framework}
-We propose the STAR template, which stands for Split integrity, Target integrity, Anchor baseline, and Reporting completeness. In this paper these map to:
+We summarize the experimentally supported requirements into the STAR template, which stands for Split integrity, Target integrity, Anchor baseline, and Reporting completeness. In this paper these map to:
 \begin{enumerate}
     \item \textbf{Continuous labels}: linear or physics-guided labels as the primary target; plateau parameters must be justified if retained.
     \item \textbf{Leave-one-bearing-out cross-validation}: no training window from the test bearing, with per-fold reporting.
@@ -382,7 +382,7 @@ Reporting & Final $R^2$ only & Per-fold, CI, RMSE, MAE, seeds \\
 We did not reproduce exact published checkpoints because public code was unavailable. IMS has only three held-out test sets, so its confidence intervals are wide; we therefore treat IMS as directional evidence. The external datasets use the same statistical feature pipeline rather than each paper's raw-signal preprocessing. PU is not used because it does not provide run-to-failure trajectories. We do not provide a quantitative prevalence survey in this version; protocol-level claims are limited to the reproduced protocol family. Future work should run exact published pipelines when code becomes available and extend STAR to raw-signal and uncertainty-aware models.
 
 \section{Conclusion}
-With converged training on XJTU-SY, PHM2012, and IMS, the combination of piecewise labels and random time-step splitting consistently produces higher $R^2$ than linear-label LOOCV, with Cliff's delta $=1.0$ for the protocol effect in all twelve model-dataset cells. The reproduced protocol family produces $R^2$ values of $0.70$--$0.86$, which are much higher than LOOCV but below the $R^2>0.99$ range reported by some papers. Our results are therefore consistent with the view that evaluation protocol plays a major role in reported RUL performance, while exact near-perfect values still require exact reproduction of the original models and preprocessing. We recommend that journals consider requiring STAR-style reporting templates so that future improvements are measured against a meaningful baseline.
+With converged training on XJTU-SY, PHM2012, and IMS, the combination of piecewise labels and random time-step splitting consistently produces higher $R^2$ than linear-label LOOCV, with Cliff's delta $=1.0$ for the protocol effect in all twelve model-dataset cells. The reproduced protocol family produces $R^2$ values of $0.70$--$0.86$, which are much higher than LOOCV but below the $R^2>0.99$ range reported by some papers. Our results are therefore consistent with the view that evaluation protocol plays a major role in reported RUL performance, while exact near-perfect values still require exact reproduction of the original models and preprocessing. We suggest STAR-style reporting as a possible guideline for future benchmarking so that improvements are measured against a meaningful baseline.
 
 \section*{CRediT Authorship Contribution Statement}
 Zhongkuan Ma: Conceptualization, Methodology, Software, Validation, Formal analysis, Writing - Original Draft, Writing - Review \& Editing.

@@ -1,7 +1,7 @@
 # RUL Evaluation Protocol Reproducibility Package
 
 This package supports the manuscript:
-*Revisiting Evaluation Protocols for Bearing Remaining Useful Life Prediction: The Effects of Labeling and Temporal Splitting Across Multiple Datasets*
+*Revisiting Evaluation Protocols for Bearing Remaining Useful Life Prediction: A Multi-Dataset Study of Labeling and Temporal Split Effects*
 
 ## Environment
 

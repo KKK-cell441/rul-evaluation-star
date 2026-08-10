@@ -4,7 +4,7 @@ A reproducible framework for evaluating the influence of labeling and protocol d
 
 Reproducibility package for the manuscript:
 
-**Revisiting Evaluation Protocols for Bearing Remaining Useful Life Prediction: The Effects of Labeling and Temporal Splitting Across Multiple Datasets**
+**Revisiting Evaluation Protocols for Bearing Remaining Useful Life Prediction: A Multi-Dataset Study of Labeling and Temporal Split Effects**
 
 ## Contents
 

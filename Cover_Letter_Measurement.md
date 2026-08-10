@@ -4,7 +4,7 @@ Dear Editor,
 
 We are submitting our manuscript entitled:
 
-**Revisiting Evaluation Protocols for Bearing Remaining Useful Life Prediction: The Effects of Labeling and Temporal Splitting Across Multiple Datasets**
+**Revisiting Evaluation Protocols for Bearing Remaining Useful Life Prediction: A Multi-Dataset Study of Labeling and Temporal Split Effects**
 
 for consideration in *Measurement*.
 
