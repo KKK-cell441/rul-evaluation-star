@@ -1,0 +1,474 @@
+{
+  "rows": [
+    {
+      "dataset": "XJTU-SY",
+      "model": "LinearRegression",
+      "n_random": 8,
+      "n_folds": 8,
+      "pairwise_prop_random_gt_loo": 1.0,
+      "cliff_delta": 1.0,
+      "exact_permutation_p": 7.77000777000777e-05,
+      "permutations": 12870
+    },
+    {
+      "dataset": "XJTU-SY",
+      "model": "StatLSTM",
+      "n_random": 8,
+      "n_folds": 8,
+      "pairwise_prop_random_gt_loo": 1.0,
+      "cliff_delta": 1.0,
+      "exact_permutation_p": 7.77000777000777e-05,
+      "permutations": 12870
+    },
+    {
+      "dataset": "XJTU-SY",
+      "model": "TCN",
+      "n_random": 8,
+      "n_folds": 8,
+      "pairwise_prop_random_gt_loo": 1.0,
+      "cliff_delta": 1.0,
+      "exact_permutation_p": 7.77000777000777e-05,
+      "permutations": 12870
+    },
+    {
+      "dataset": "XJTU-SY",
+      "model": "PatchTST",
+      "n_random": 8,
+      "n_folds": 8,
+      "pairwise_prop_random_gt_loo": 1.0,
+      "cliff_delta": 1.0,
+      "exact_permutation_p": 7.77000777000777e-05,
+      "permutations": 12870
+    },
+    {
+      "dataset": "PHM2012",
+      "model": "LinearRegression",
+      "n_random": 8,
+      "n_folds": 6,
+      "pairwise_prop_random_gt_loo": 1.0,
+      "cliff_delta": 1.0,
+      "exact_permutation_p": 0.000333000333000333,
+      "permutations": 3003
+    },
+    {
+      "dataset": "PHM2012",
+      "model": "StatLSTM",
+      "n_random": 8,
+      "n_folds": 6,
+      "pairwise_prop_random_gt_loo": 1.0,
+      "cliff_delta": 1.0,
+      "exact_permutation_p": 0.000333000333000333,
+      "permutations": 3003
+    },
+    {
+      "dataset": "PHM2012",
+      "model": "TCN",
+      "n_random": 8,
+      "n_folds": 6,
+      "pairwise_prop_random_gt_loo": 1.0,
+      "cliff_delta": 1.0,
+      "exact_permutation_p": 0.000333000333000333,
+      "permutations": 3003
+    },
+    {
+      "dataset": "PHM2012",
+      "model": "PatchTST",
+      "n_random": 8,
+      "n_folds": 6,
+      "pairwise_prop_random_gt_loo": 1.0,
+      "cliff_delta": 1.0,
+      "exact_permutation_p": 0.000333000333000333,
+      "permutations": 3003
+    },
+    {
+      "dataset": "IMS",
+      "model": "LinearRegression",
+      "n_random": 8,
+      "n_folds": 3,
+      "pairwise_prop_random_gt_loo": 1.0,
+      "cliff_delta": 1.0,
+      "exact_permutation_p": 0.006060606060606061,
+      "permutations": 165
+    },
+    {
+      "dataset": "IMS",
+      "model": "StatLSTM",
+      "n_random": 8,
+      "n_folds": 3,
+      "pairwise_prop_random_gt_loo": 1.0,
+      "cliff_delta": 1.0,
+      "exact_permutation_p": 0.006060606060606061,
+      "permutations": 165
+    },
+    {
+      "dataset": "IMS",
+      "model": "TCN",
+      "n_random": 8,
+      "n_folds": 3,
+      "pairwise_prop_random_gt_loo": 1.0,
+      "cliff_delta": 1.0,
+      "exact_permutation_p": 0.006060606060606061,
+      "permutations": 165
+    },
+    {
+      "dataset": "IMS",
+      "model": "PatchTST",
+      "n_random": 8,
+      "n_folds": 3,
+      "pairwise_prop_random_gt_loo": 1.0,
+      "cliff_delta": 1.0,
+      "exact_permutation_p": 0.006060606060606061,
+      "permutations": 165
+    }
+  ],
+  "table_rows": [
+    {
+      "dataset": "XJTU-SY",
+      "model": "LinearRegression",
+      "lin": {
+        "mean": 0.1778721601718118,
+        "std": 0.0021760087080200654,
+        "ci95_low": 0.17605297136625858,
+        "ci95_high": 0.179691348977365
+      },
+      "pw": {
+        "mean": 0.410271125405666,
+        "std": 0.0004924288186880638,
+        "ci95_low": 0.4098594446108294,
+        "ci95_high": 0.4106828062005026
+      },
+      "delta_label": 0.23239896523385423,
+      "rnd": {
+        "mean": 0.4054219010046254,
+        "std": 0.02733602820299556,
+        "min": 0.363665815799862,
+        "max": 0.4472218958281031
+      },
+      "delta_protocol": 0.2275497408328136,
+      "d_label": 1.0,
+      "d_protocol": 1.0,
+      "lin_random_mean": 0.16513612769702496,
+      "lin_random_min": 0.14902735722956506,
+      "lin_random_max": 0.1852159232512427
+    },
+    {
+      "dataset": "XJTU-SY",
+      "model": "StatLSTM",
+      "lin": {
+        "mean": 0.22263715993302377,
+        "std": 0.0015054145379563373,
+        "ci95_low": 0.22137860188356676,
+        "ci95_high": 0.22389571798248079
+      },
+      "pw": {
+        "mean": 0.42241833807622053,
+        "std": 0.0009147328478314975,
+        "ci95_low": 0.42165360227773147,
+        "ci95_high": 0.4231830738747096
+      },
+      "delta_label": 0.19978117814319676,
+      "rnd": {
+        "mean": 0.41029421032820695,
+        "std": 0.02051849231973879,
+        "min": 0.3852051402892406,
+        "max": 0.4345690412796731
+      },
+      "delta_protocol": 0.18765705039518318,
+      "d_label": 1.0,
+      "d_protocol": 1.0,
+      "lin_random_mean": 0.2225906269278689,
+      "lin_random_min": 0.20734523182548215,
+      "lin_random_max": 0.23289477762072164
+    },
+    {
+      "dataset": "XJTU-SY",
+      "model": "TCN",
+      "lin": {
+        "mean": 0.22155328783630945,
+        "std": 0.0023378158879647963,
+        "ci95_low": 0.21959882484305254,
+        "ci95_high": 0.22350775082956637
+      },
+      "pw": {
+        "mean": 0.427818581265167,
+        "std": 0.0007531069666070837,
+        "ci95_low": 0.42718896808485834,
+        "ci95_high": 0.4284481944454756
+      },
+      "delta_label": 0.20626529342885752,
+      "rnd": {
+        "mean": 0.40967634814657133,
+        "std": 0.022818262936421575,
+        "min": 0.3817998985350616,
+        "max": 0.4401975465514466
+      },
+      "delta_protocol": 0.18812306031026188,
+      "d_label": 1.0,
+      "d_protocol": 1.0,
+      "lin_random_mean": 0.2181518798963977,
+      "lin_random_min": 0.19938638748112625,
+      "lin_random_max": 0.22846279461659968
+    },
+    {
+      "dataset": "XJTU-SY",
+      "model": "PatchTST",
+      "lin": {
+        "mean": 0.2219355191462316,
+        "std": 0.0019724145217381705,
+        "ci95_low": 0.22028653933993222,
+        "ci95_high": 0.223584498952531
+      },
+      "pw": {
+        "mean": 0.42938523653587046,
+        "std": 0.0013225086156102828,
+        "ci95_low": 0.4282795916641847,
+        "ci95_high": 0.4304908814075562
+      },
+      "delta_label": 0.20744971738963885,
+      "rnd": {
+        "mean": 0.41555839804116046,
+        "std": 0.025296372505473518,
+        "min": 0.37962791453159095,
+        "max": 0.4527834780816006
+      },
+      "delta_protocol": 0.19362287889492885,
+      "d_label": 1.0,
+      "d_protocol": 1.0,
+      "lin_random_mean": 0.20304061821280378,
+      "lin_random_min": 0.18349582598841596,
+      "lin_random_max": 0.22119662686864228
+    },
+    {
+      "dataset": "PHM2012",
+      "model": "LinearRegression",
+      "lin": {
+        "mean": -0.16842155266950878,
+        "std": 0.18823470313707752,
+        "ci95_low": -0.3659617588067984,
+        "ci95_high": 0.029118653467780836
+      },
+      "pw": {
+        "mean": -0.2560053490229516,
+        "std": 0.7646566612053461,
+        "ci95_low": -1.0584633015757108,
+        "ci95_high": 0.5464526035298077
+      },
+      "delta_label": -0.0875837963534428,
+      "rnd": {
+        "mean": 0.4157836362549884,
+        "std": 0.02898489484466749,
+        "min": 0.37579623343347024,
+        "max": 0.46471126512364835
+      },
+      "delta_protocol": 0.5842051889244971,
+      "d_label": 0.1111111111111111,
+      "d_protocol": 1.0,
+      "lin_random_mean": 0.2821514757405016,
+      "lin_random_min": 0.2563245528335899,
+      "lin_random_max": 0.3159883657693714
+    },
+    {
+      "dataset": "PHM2012",
+      "model": "StatLSTM",
+      "lin": {
+        "mean": 0.24472037239712793,
+        "std": 0.21377466640789136,
+        "ci95_low": 0.02037761856181186,
+        "ci95_high": 0.469063126232444
+      },
+      "pw": {
+        "mean": -0.8964058722277833,
+        "std": 1.6877824994097321,
+        "ci95_low": -2.66762497950108,
+        "ci95_high": 0.874813235045513
+      },
+      "delta_label": -1.1411262446249113,
+      "rnd": {
+        "mean": 0.784693857742878,
+        "std": 0.01924021056673795,
+        "min": 0.7573507703540512,
+        "max": 0.8085236272042915
+      },
+      "delta_protocol": 0.5399734853457501,
+      "d_label": -0.3888888888888889,
+      "d_protocol": 1.0,
+      "lin_random_mean": 0.7935382953706867,
+      "lin_random_min": 0.7743068433177549,
+      "lin_random_max": 0.8121752328689251
+    },
+    {
+      "dataset": "PHM2012",
+      "model": "TCN",
+      "lin": {
+        "mean": 0.17385933966099124,
+        "std": 0.1370570441026734,
+        "ci95_low": 0.03002679288085003,
+        "ci95_high": 0.31769188644113244
+      },
+      "pw": {
+        "mean": -0.25973365845870094,
+        "std": 0.8507869358824305,
+        "ci95_low": -1.1525797909316233,
+        "ci95_high": 0.6331124740142215
+      },
+      "delta_label": -0.4335929981196922,
+      "rnd": {
+        "mean": 0.8425262567438094,
+        "std": 0.018552516471009566,
+        "min": 0.8184515304566494,
+        "max": 0.8645002508462546
+      },
+      "delta_protocol": 0.6686669170828182,
+      "d_label": -0.3333333333333333,
+      "d_protocol": 1.0,
+      "lin_random_mean": 0.8262008982885292,
+      "lin_random_min": 0.8052362075124384,
+      "lin_random_max": 0.8531207183609179
+    },
+    {
+      "dataset": "PHM2012",
+      "model": "PatchTST",
+      "lin": {
+        "mean": 0.3687461001506916,
+        "std": 0.19979621903650102,
+        "ci95_low": 0.15907282717732288,
+        "ci95_high": 0.5784193731240603
+      },
+      "pw": {
+        "mean": -0.5295454901046327,
+        "std": 1.3703817308423645,
+        "ci95_low": -1.9676729187129562,
+        "ci95_high": 0.9085819385036907
+      },
+      "delta_label": -0.8982915902553243,
+      "rnd": {
+        "mean": 0.8230700942043738,
+        "std": 0.03411406247258977,
+        "min": 0.775298941574806,
+        "max": 0.8571315878808151
+      },
+      "delta_protocol": 0.45432399405368223,
+      "d_label": -0.6111111111111112,
+      "d_protocol": 1.0,
+      "lin_random_mean": 0.7931050388984318,
+      "lin_random_min": 0.7549923454366829,
+      "lin_random_max": 0.8350556524131737
+    },
+    {
+      "dataset": "IMS",
+      "model": "LinearRegression",
+      "lin": {
+        "mean": -2.1090212406192292,
+        "std": 1.4364016259557977,
+        "ci95_low": -5.677240688875518,
+        "ci95_high": 1.4591982076370598
+      },
+      "pw": {
+        "mean": -4.5860910078927315,
+        "std": 8.409906562069601,
+        "ci95_low": -25.47745705102639,
+        "ci95_high": 16.305275035240932
+      },
+      "delta_label": -2.4770697672735023,
+      "rnd": {
+        "mean": 0.3204070442414314,
+        "std": 0.008351656801503604,
+        "min": 0.3096819615234686,
+        "max": 0.33332991967869074
+      },
+      "delta_protocol": 2.4294282848606605,
+      "d_label": 0.3333333333333333,
+      "d_protocol": 1.0,
+      "lin_random_mean": 0.21761735768426982,
+      "lin_random_min": 0.2096784445850186,
+      "lin_random_max": 0.2254343319815435
+    },
+    {
+      "dataset": "IMS",
+      "model": "StatLSTM",
+      "lin": {
+        "mean": -1.2082451756657264,
+        "std": 1.008659871728791,
+        "ci95_low": -3.7138952013564666,
+        "ci95_high": 1.297404850025014
+      },
+      "pw": {
+        "mean": -0.8863530190864889,
+        "std": 1.0884609588925662,
+        "ci95_low": -3.5902399348394387,
+        "ci95_high": 1.8175338966664607
+      },
+      "delta_label": 0.32189215657923753,
+      "rnd": {
+        "mean": 0.6917900177374181,
+        "std": 0.00778391073879917,
+        "min": 0.6812214570242006,
+        "max": 0.7057332165107106
+      },
+      "delta_protocol": 1.9000351934031445,
+      "d_label": 0.5555555555555556,
+      "d_protocol": 1.0,
+      "lin_random_mean": 0.585274456969517,
+      "lin_random_min": 0.5734902534053292,
+      "lin_random_max": 0.5955048569633257
+    },
+    {
+      "dataset": "IMS",
+      "model": "TCN",
+      "lin": {
+        "mean": -2.330940496771331,
+        "std": 1.1613071392647878,
+        "ci95_low": -5.215787356343883,
+        "ci95_high": 0.5539063628012206
+      },
+      "pw": {
+        "mean": -0.30185820105410005,
+        "std": 0.38444987118005114,
+        "ci95_low": -1.2568846243300213,
+        "ci95_high": 0.6531682222218214
+      },
+      "delta_label": 2.029082295717231,
+      "rnd": {
+        "mean": 0.7102165782147674,
+        "std": 0.0050073580031601075,
+        "min": 0.7027439994894058,
+        "max": 0.7170641315699697
+      },
+      "delta_protocol": 3.0411570749860983,
+      "d_label": 1.0,
+      "d_protocol": 1.0,
+      "lin_random_mean": 0.6023003991441085,
+      "lin_random_min": 0.5962560216735098,
+      "lin_random_max": 0.6119329963824034
+    },
+    {
+      "dataset": "IMS",
+      "model": "PatchTST",
+      "lin": {
+        "mean": -1.0581382297513278,
+        "std": 0.8320672669167583,
+        "ci95_low": -3.125107906212275,
+        "ci95_high": 1.0088314467096193
+      },
+      "pw": {
+        "mean": -2.798943674824487,
+        "std": 2.678386434835628,
+        "ci95_low": -9.452424424240188,
+        "ci95_high": 3.854537074591215
+      },
+      "delta_label": -1.7408054450731592,
+      "rnd": {
+        "mean": 0.6593786831507362,
+        "std": 0.018599730960650478,
+        "min": 0.6388219317791121,
+        "max": 0.6892216091588856
+      },
+      "delta_protocol": 1.717516912902064,
+      "d_label": -0.5555555555555556,
+      "d_protocol": 1.0,
+      "lin_random_mean": 0.5363730317437398,
+      "lin_random_min": 0.506697308370298,
+      "lin_random_max": 0.5807017976128793
+    }
+  ]
+}
