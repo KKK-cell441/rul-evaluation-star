@@ -110,9 +110,9 @@ def build_random_loaders(datasets, idx, batch_size=BATCH_SIZE):
     train_idx = idx[:n_train]
     val_idx = idx[n_train : n_train + n_val]
     test_idx = idx[n_train + n_val :]
-    features = np.concatenate([ds.features for ds in datasets])
-    feat_mean = features[train_idx].mean(axis=0).astype(np.float32)
-    feat_std = features[train_idx].std(axis=0).astype(np.float32)
+    valid_features = np.concatenate([ds.features[ds.valid_starts] for ds in datasets])
+    feat_mean = valid_features[train_idx].mean(axis=0).astype(np.float32)
+    feat_std = valid_features[train_idx].std(axis=0).astype(np.float32)
     feat_std[feat_std < 1e-12] = 1.0
     for ds in datasets:
         ds.set_normalisation(feat_mean, feat_std)
@@ -342,13 +342,15 @@ def run_loocv(datasets, model_name, max_epochs):
 
 
 def run_random_seed(datasets, model_name, seed, max_epochs):
-    _, y, _, _ = arrays_from_datasets(datasets)
     rng = np.random.default_rng(seed)
-    idx = rng.permutation(len(y))
-    if model_name == "LinearRegression":
-        return lr_random(datasets, idx)
-    if model_name == "Constant":
+    if model_name in ("LinearRegression", "Constant"):
+        _, y, _, _ = arrays_from_datasets(datasets)
+        idx = rng.permutation(len(y))
+        if model_name == "LinearRegression":
+            return lr_random(datasets, idx)
         return constant_random(datasets, idx)
+    total = sum(len(ds) for ds in datasets)
+    idx = rng.permutation(total)
     train_loader, val_loader, test_loader = build_random_loaders(datasets, idx)
     model = train_model(make_model(model_name), train_loader, val_loader, max_epochs)
     val_pred, val_true = predict_loader(model, val_loader)
@@ -405,15 +407,21 @@ def main():
         label_results = ds_results.setdefault(label, {})
         datasets = create_light_datasets(args.data_dir, history_length=10, rul_key=f"rul_{label}")
         for model_name in args.models:
-            if model_name in label_results:
+            existing = label_results.get(model_name)
+            if existing is not None and existing.get("random") is not None:
                 print(f"skip {label}/{model_name}", flush=True)
                 continue
             t0 = time.time()
-            loocv = run_loocv(datasets, model_name, args.epochs)
+            loocv = existing.get("loocv") if existing is not None else None
+            if loocv is None:
+                loocv = run_loocv(datasets, model_name, args.epochs)
+                label_results[model_name] = {"loocv": loocv, "random": None}
+                out_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
+                print(f"{ds_name}/{label}/{model_name}: LOOCV saved R2={loocv['r2']['mean']:.4f} ({time.time()-t0:.0f}s)", flush=True)
             random = run_random(datasets, model_name, args.epochs, tuple(args.random_seeds))
             label_results[model_name] = {"loocv": loocv, "random": random}
             out_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
-            print(f"{ds_name}/{label}/{model_name}: LOOCV R2={loocv['r2']['mean']:.4f} Random R2={random['r2']['mean']:.4f} ({time.time()-t0:.0f}s)", flush=True)
+            print(f"{ds_name}/{label}/{model_name}: Random R2={random['r2']['mean']:.4f} ({time.time()-t0:.0f}s)", flush=True)
 
     out_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
     print("Saved", out_path)
