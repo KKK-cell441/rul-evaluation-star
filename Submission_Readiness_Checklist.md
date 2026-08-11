@@ -3,8 +3,8 @@
 ## Manuscript
 
 - Title: Reconsidering Reliability Assessment of Data-Driven Predictive Maintenance: The Impact of Evaluation Protocols on Bearing Remaining Useful Life Prediction
-- File: `manuscript_revised_v17_jim.pdf`
-- Source: `manuscript_revised_v17_jim.tex`
+- File: `manuscript_revised_v18_jim.pdf`
+- Source: `manuscript_revised_v18_jim.tex`
 - Pages: 20
 - Template: Springer sn-jnl (conversion complete)
 - Elsevier source version: `manuscript_revised_v7.pdf` / `manuscript_revised_v7.tex`
@@ -33,8 +33,8 @@
 
 - [x] `manuscript_revised_v7.pdf`
 - [x] `manuscript_revised_v7.tex`
-- [x] `manuscript_revised_v17_jim.pdf`
-- [x] `manuscript_revised_v17_jim.tex`
+- [x] `manuscript_revised_v18_jim.pdf`
+- [x] `manuscript_revised_v18_jim.tex`
 - [x] `sn-jnl.cls`
 - [x] `sn-mathphys-num.bst`
 - [x] `README.md`
@@ -60,4 +60,4 @@
 
 ## JIM-Specific Note
 
-JIM is a Springer journal. The manuscript has been converted to the Springer `sn-jnl` template; `manuscript_revised_v17_jim.pdf` is the current submission-ready build.
+JIM is a Springer journal. The manuscript has been converted to the Springer `sn-jnl` template; `manuscript_revised_v18_jim.pdf` is the current submission candidate.
