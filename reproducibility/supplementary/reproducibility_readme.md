@@ -1,4 +1,4 @@
-# Reproducibility Notes (v16)
+# Reproducibility Notes (v17)
 
 ## Datasets and preprocessing
 - XJTU-SY: `scripts/preprocess_xjtu15.py` (full public dataset; v14 uses 8 bearings from conditions 1-2).
@@ -35,7 +35,7 @@
 - `results/converged_*.json`
 - `results/split_sensitivity_*.json`
 - `results/converged_results_summary.md`
-- `paper/manuscript_revised_v16_jim.pdf/tex`
+- `paper/manuscript_revised_v17_jim.pdf/tex`
 - Quantitative prevalence survey counts are not used as evidence in the manuscript.
 
 ## STAR audit evidence
