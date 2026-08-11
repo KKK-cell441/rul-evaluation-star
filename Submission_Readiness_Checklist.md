@@ -23,6 +23,7 @@
 ## Data and Code
 
 - GitHub: https://github.com/KKK-cell441/rul-evaluation-star
+- GitHub release: https://github.com/KKK-cell441/rul-evaluation-star/releases/tag/v18
 - Zenodo DOI: https://doi.org/10.5281/zenodo.21866359
 - DOI status: 21866359 verified against DataCite as v1.0.4; 21861060 exists but is the older v1.0.1 archive.
 - DOI note: 21866359 currently archives v1.0.4; v18 needs a new Zenodo release/DOI before journal submission.
@@ -45,13 +46,14 @@
 - [x] `reproducibility/`
 - [x] `figures/graphical_abstract.png`
 - [x] `figures/graphical_abstract.pdf`
+- [x] `Zenodo_Upload_Checklist.md`
 
 ## Remaining Before Submission
 
 - [ ] Confirm ORCID and author details in the online submission system.
 - [ ] Confirm JIM submission-portal requirements for Highlights and any graphical abstract.
 - [x] Push v18 manuscript and all v14/v18 reproducibility result files to GitHub `main`.
-- [ ] Create a new Zenodo release for the v18 package and update the manuscript DOI if it changes.
+- [ ] Publish the v18 Zenodo upload following `Zenodo_Upload_Checklist.md`, then send the new DOI back for manuscript and cover-letter update.
 - [ ] Confirm exact dataset versions and download dates.
 - [ ] Confirm publisher-specific declarations in the online form.
 - [x] Publish the STAR audit coding sheet and `fulltexts/P03.pdf` in the public GitHub package.
