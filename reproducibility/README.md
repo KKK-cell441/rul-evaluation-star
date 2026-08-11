@@ -76,8 +76,8 @@ Before journal submission, the following author-controlled items must be complet
 - Email: 2024212760@nefu.edu.cn
 - Funding statement
 - Public repository: https://github.com/KKK-cell441/rul-evaluation-star
-- DOI: https://doi.org/10.5281/zenodo.21866359
-- DOI note: 21866359 is the current archived release; update after the v18 package is released.
+- DOI: https://doi.org/10.5281/zenodo.21887653
+- DOI note: v18 Zenodo release is published and verified; update references only if a later release is created.
 
 Quantitative prevalence survey counts are not part of this version. Protocol-level claims are limited to the reproduced experimental family.
 
