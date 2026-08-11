@@ -19,6 +19,7 @@ We also propose the STAR reporting template, which summarizes the experimentally
 The reproducibility package is available at:
 
 - GitHub: https://github.com/KKK-cell441/rul-evaluation-star
+- Zenodo DOI: https://doi.org/10.5281/zenodo.21887653
 
 The manuscript is original, has not been published previously, and is not under consideration elsewhere. All authors have approved the submission.
 
