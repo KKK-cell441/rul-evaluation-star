@@ -14,7 +14,7 @@ We use a complete 2x2 factorial design on three public datasets (XJTU-SY, PHM201
 
 The key finding is that evaluation protocol can substantially alter reported performance. In particular, random window splitting evaluates within-trajectory interpolation rather than new-bearing generalization, and its effect interacts with label construction. From a Measurement perspective, this is a study of the reliability of measurement results and benchmark protocol design: reported performance cannot be interpreted without a clearly specified cross-bearing evaluation protocol. The paper therefore focuses on reproducible evaluation, comparability across studies, and the uncertainty of reported performance.
 
-We also propose the STAR reporting template, which summarizes the experimentally supported reporting choices into a recommended reporting aid: split integrity, target integrity, anchor baseline, and reporting completeness.
+We also propose the STAR reporting template, which summarizes the experimentally supported reporting choices into a recommended reporting aid: split integrity, target integrity, anchor baseline, and reporting completeness. We encourage reviewers and authors to request STAR-style reporting during peer review.
 
 The reproducibility package is available at:
 
