@@ -3,8 +3,8 @@
 ## Manuscript
 
 - Title: Reconsidering Reliability Assessment of Data-Driven Predictive Maintenance: The Impact of Evaluation Protocols on Bearing Remaining Useful Life Prediction
-- File: `manuscript_revised_v15_jim.pdf`
-- Source: `manuscript_revised_v15_jim.tex`
+- File: `manuscript_revised_v16_jim.pdf`
+- Source: `manuscript_revised_v16_jim.tex`
 - Pages: 20
 - Template: Springer sn-jnl (conversion complete)
 - Elsevier source version: `manuscript_revised_v7.pdf` / `manuscript_revised_v7.tex`
@@ -33,8 +33,8 @@
 
 - [x] `manuscript_revised_v7.pdf`
 - [x] `manuscript_revised_v7.tex`
-- [x] `manuscript_revised_v15_jim.pdf`
-- [x] `manuscript_revised_v15_jim.tex`
+- [x] `manuscript_revised_v16_jim.pdf`
+- [x] `manuscript_revised_v16_jim.tex`
 - [x] `sn-jnl.cls`
 - [x] `sn-mathphys-num.bst`
 - [x] `README.md`
@@ -47,6 +47,7 @@
 ## Remaining Before Submission
 
 - [ ] Confirm ORCID and author details in the online submission system.
+- [ ] Confirm JIM submission-portal requirements for Highlights and any graphical abstract.
 - [x] Push v15 manuscript and all v14/v15 reproducibility result files to GitHub `main`.
 - [ ] Create a new Zenodo release for the v15 package and update the manuscript DOI if it changes.
 - [ ] Confirm exact dataset versions and download dates.
@@ -57,4 +58,4 @@
 
 ## JIM-Specific Note
 
-JIM is a Springer journal. The manuscript has been converted to the Springer `sn-jnl` template; `manuscript_revised_v15_jim.pdf` is the current submission-ready build.
+JIM is a Springer journal. The manuscript has been converted to the Springer `sn-jnl` template; `manuscript_revised_v16_jim.pdf` is the current submission-ready build.
