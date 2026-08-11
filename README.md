@@ -9,7 +9,7 @@ Reproducibility package for the manuscript:
 ## Contents
 
 - `reproducibility/` contains preprocessing scripts, converged training and split-sensitivity runners, result JSON files, and table/figure generators.
-- `manuscript_revised_v15_jim.pdf` is the latest Springer/JIM submission manuscript.
+- `manuscript_revised_v16_jim.pdf` is the latest Springer/JIM submission manuscript.
 - `manuscript_revised_v7.pdf` remains the Elsevier source version.
 - `figures/` contains the figures used in the manuscript.
 
