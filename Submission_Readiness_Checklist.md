@@ -24,9 +24,9 @@
 
 - GitHub: https://github.com/KKK-cell441/rul-evaluation-star
 - GitHub release: https://github.com/KKK-cell441/rul-evaluation-star/releases/tag/v18
-- Zenodo DOI: https://doi.org/10.5281/zenodo.21866359
-- DOI status: 21866359 verified against DataCite as v1.0.4; 21861060 exists but is the older v1.0.1 archive.
-- DOI note: 21866359 currently archives v1.0.4; v18 needs a new Zenodo release/DOI before journal submission.
+- Zenodo DOI: https://doi.org/10.5281/zenodo.21887653
+- DOI status: 21887653 verified against Zenodo API as v18; 21866359 remains the older v1.0.4 archive.
+- DOI note: v18 Zenodo release is published and filled back into manuscript and submission docs.
 - Reproducibility package: `reproducibility/`
 - Primary random-split protocol: 8 seeds (42-49) across all 12 model-dataset cells
 
@@ -53,11 +53,11 @@
 - [ ] Confirm ORCID and author details in the online submission system.
 - [ ] Confirm JIM submission-portal requirements for Highlights and any graphical abstract.
 - [x] Push v18 manuscript and all v14/v18 reproducibility result files to GitHub `main`.
-- [ ] Publish the v18 Zenodo upload following `Zenodo_Upload_Checklist.md`, then send the new DOI back for manuscript and cover-letter update.
+- [x] Publish the v18 Zenodo upload following `Zenodo_Upload_Checklist.md`; DOI 10.5281/zenodo.21887653 is filled back.
 - [ ] Confirm exact dataset versions and download dates.
 - [ ] Confirm publisher-specific declarations in the online form.
 - [x] Publish the STAR audit coding sheet and `fulltexts/P03.pdf` in the public GitHub package.
-- [ ] If a new Zenodo DOI is generated after the supplementary release, update the manuscript DOI.
+- [x] v18 Zenodo DOI is filled back into the manuscript, cover letters, and submission docs.
 - [x] No further experiments or model additions planned.
 
 ## JIM-Specific Note
