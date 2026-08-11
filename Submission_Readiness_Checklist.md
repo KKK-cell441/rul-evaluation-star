@@ -25,7 +25,7 @@
 - GitHub: https://github.com/KKK-cell441/rul-evaluation-star
 - Zenodo DOI: https://doi.org/10.5281/zenodo.21866359
 - DOI status: 21866359 verified against DataCite as v1.0.4; 21861060 exists but is the older v1.0.1 archive.
-- DOI note: 21866359 currently archives v1.0.4; v15 needs a new Zenodo release/DOI before journal submission.
+- DOI note: 21866359 currently archives v1.0.4; v18 needs a new Zenodo release/DOI before journal submission.
 - Reproducibility package: `reproducibility/`
 - Primary random-split protocol: 8 seeds (42-49) across all 12 model-dataset cells
 
@@ -50,8 +50,8 @@
 
 - [ ] Confirm ORCID and author details in the online submission system.
 - [ ] Confirm JIM submission-portal requirements for Highlights and any graphical abstract.
-- [x] Push v15 manuscript and all v14/v15 reproducibility result files to GitHub `main`.
-- [ ] Create a new Zenodo release for the v15 package and update the manuscript DOI if it changes.
+- [x] Push v18 manuscript and all v14/v18 reproducibility result files to GitHub `main`.
+- [ ] Create a new Zenodo release for the v18 package and update the manuscript DOI if it changes.
 - [ ] Confirm exact dataset versions and download dates.
 - [ ] Confirm publisher-specific declarations in the online form.
 - [x] Publish the STAR audit coding sheet and `fulltexts/P03.pdf` in the public GitHub package.
