@@ -77,6 +77,8 @@ Before journal submission, the following author-controlled items must be complet
 - Funding statement
 - Public repository: https://github.com/KKK-cell441/rul-evaluation-star
 - DOI: https://doi.org/10.5281/zenodo.21866359
-- DOI note: 21866359 is the current archived release; update after the v15 package is released.
+- DOI note: 21866359 is the current archived release; update after the v18 package is released.
 
 Quantitative prevalence survey counts are not part of this version. Protocol-level claims are limited to the reproduced experimental family.
+
+The package reproduces the benchmark experiments reported in the manuscript; it does not reproduce industrial deployment results.
