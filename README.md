@@ -6,6 +6,8 @@ Reproducibility package for the manuscript:
 
 **Reconsidering Reliability Assessment of Data-Driven Predictive Maintenance: The Impact of Evaluation Protocols on Bearing Remaining Useful Life Prediction**
 
+The package reproduces the benchmark experiments reported in the manuscript; it does not reproduce industrial deployment results.
+
 ## Contents
 
 - `reproducibility/` contains preprocessing scripts, converged training and split-sensitivity runners, result JSON files, and table/figure generators.
