@@ -1,5 +1,7 @@
 # Zenodo v18 Upload Checklist
 
+Status: v18 published. DOI: 10.5281/zenodo.21887653.
+
 Use this checklist when creating the v18 Zenodo release. After publishing, send the new DOI back to Codex so the manuscript, cover letters, and repository docs can be updated.
 
 ## Upload destination
