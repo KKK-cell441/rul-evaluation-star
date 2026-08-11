@@ -16,6 +16,7 @@ The package reproduces the benchmark experiments reported in the manuscript; it 
 - `figures/` contains the figures used in the manuscript.
 - `figures/graphical_abstract.png` and `graphical_abstract.pdf` are provided for the JIM submission package.
 - `Zenodo_Upload_Checklist.md` lists the files and metadata for the v18 Zenodo release.
+- Zenodo DOI: https://doi.org/10.5281/zenodo.21887653
 
 ## Environment
 
