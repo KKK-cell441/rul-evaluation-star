@@ -1,0 +1,31 @@
+\begin{table*}[!ht]
+\centering
+\caption{Constant predictor baseline under the non-overlapping stride-10 protocol. The constant predictor always outputs the mean training RUL. LOOCV values are mean [95\% CI]; random values are mean [min--max] across eight seeds.}
+\label{tab:constant_baseline_nonoverlap}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllccc}
+\toprule
+Dataset & Label & Protocol & $R^2$ & RMSE & MAE \\
+\midrule
+\midrule
+XJTU-SY & linear & LOOCV & 0.000 & 0.289 & 0.250 \\
+XJTU-SY & linear & Random & -0.001 [-0.003, 0.000] & 0.288 [0.284, 0.291] & 0.249 [0.245, 0.251] \\
+\midrule
+XJTU-SY & piecewise & LOOCV & 0.000 & 0.238 & 0.162 \\
+XJTU-SY & piecewise & Random & -0.001 [-0.005, 0.000] & 0.240 [0.228, 0.256] & 0.163 [0.157, 0.171] \\
+\midrule
+PHM2012 & linear & LOOCV & 0.000 [0.000, 0.000] & 0.289 [0.289, 0.289] & 0.250 [0.250, 0.250] \\
+PHM2012 & linear & Random & 0.000 [-0.001, 0.000] & 0.289 [0.286, 0.293] & 0.251 [0.247, 0.254] \\
+\midrule
+PHM2012 & piecewise & LOOCV & 0.000 [0.000, 0.000] & 0.239 [0.238, 0.239] & 0.162 [0.162, 0.163] \\
+PHM2012 & piecewise & Random & -0.001 [-0.003, 0.000] & 0.243 [0.231, 0.256] & 0.165 [0.158, 0.172] \\
+\midrule
+IMS & linear & LOOCV & 0.000 [0.000, 0.000] & 0.289 [0.289, 0.289] & 0.250 [0.250, 0.250] \\
+IMS & linear & Random & 0.000 [0.000, 0.000] & 0.289 [0.287, 0.291] & 0.250 [0.248, 0.253] \\
+\midrule
+IMS & piecewise & LOOCV & 0.000 [0.000, 0.000] & 0.238 [0.238, 0.238] & 0.162 [0.162, 0.162] \\
+IMS & piecewise & Random & 0.000 [0.000, 0.000] & 0.239 [0.237, 0.243] & 0.163 [0.161, 0.165] \\
+\bottomrule
+\end{tabular}}
+\end{table*}

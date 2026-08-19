@@ -1,0 +1,28 @@
+\begin{table*}[!ht]
+\centering
+\caption{Absolute error metrics for the primary non-overlap protocol comparison. LOOCV values are means across held-out bearings; random-split values are means across eight seeds (42--49).}
+\label{tab:errors_nonoverlap}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llcccccc}
+\toprule
+Dataset & Model & $R^2_{\mathrm{lin,LOOCV}}$ & $\mathrm{RMSE}_{\mathrm{lin,LOOCV}}$ & $\mathrm{MAE}_{\mathrm{lin,LOOCV}}$ & $R^2_{\mathrm{pw,random}}$ & $\mathrm{RMSE}_{\mathrm{pw,random}}$ & $\mathrm{MAE}_{\mathrm{pw,random}}$ \\
+\midrule
+\midrule
+XJTU-SY & Linear Reg. & 0.178 & 0.262 & 0.250 & 0.405 & 0.185 & 0.107 \\
+XJTU-SY & LSTM & 0.193 & 0.259 & 0.249 & 0.310 & 0.190 & 0.108 \\
+XJTU-SY & TCN & 0.190 & 0.260 & 0.248 & 0.330 & 0.187 & 0.115 \\
+XJTU-SY & PatchTST & 0.196 & 0.259 & 0.248 & 0.314 & 0.189 & 0.108 \\
+\midrule
+PHM2012 & Linear Reg. & -0.168 & 0.312 & 0.263 & 0.416 & 0.186 & 0.116 \\
+PHM2012 & LSTM & -0.119 & 0.297 & 0.256 & 0.518 & 0.168 & 0.096 \\
+PHM2012 & TCN & 0.196 & 0.255 & 0.209 & 0.424 & 0.186 & 0.117 \\
+PHM2012 & PatchTST & 0.059 & 0.277 & 0.229 & 0.642 & 0.145 & 0.080 \\
+\midrule
+IMS & Linear Reg. & -2.109 & 0.498 & 0.427 & 0.320 & 0.197 & 0.127 \\
+IMS & LSTM & -1.279 & 0.419 & 0.356 & 0.485 & 0.171 & 0.104 \\
+IMS & TCN & -2.230 & 0.510 & 0.435 & 0.522 & 0.164 & 0.100 \\
+IMS & PatchTST & -1.721 & 0.460 & 0.382 & 0.469 & 0.173 & 0.103 \\
+\bottomrule
+\end{tabular}}
+\end{table*}

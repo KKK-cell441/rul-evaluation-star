@@ -1,0 +1,28 @@
+\begin{table*}[!ht]
+\centering
+\caption{Complete $2\times2$ non-overlap protocol comparison for MAE. LOOCV values are mean [95\% CI] across held-out bearings; random values are mean [min--max] across eight seeds (42--49). MAE is computed on trajectory-normalized RUL.}
+\label{tab:mae_2x2_nonoverlap}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llcccc}
+\toprule
+Dataset & Model & Linear LOOCV & Linear random & Piecewise LOOCV & Piecewise random \\
+\midrule
+\midrule
+XJTU-SY & Linear Reg. & 0.250 [0.250, 0.250] & 0.250 [0.249, 0.252] & 0.105 [0.105, 0.106] & 0.107 [0.103, 0.113] \\
+XJTU-SY & LSTM & 0.249 [0.249, 0.249] & 0.254 [0.249, 0.263] & 0.105 [0.105, 0.105] & 0.108 [0.094, 0.119] \\
+XJTU-SY & TCN & 0.248 [0.248, 0.248] & 0.253 [0.246, 0.259] & 0.113 [0.109, 0.116] & 0.115 [0.099, 0.125] \\
+XJTU-SY & PatchTST & 0.248 [0.247, 0.248] & 0.255 [0.249, 0.263] & 0.105 [0.103, 0.107] & 0.108 [0.092, 0.116] \\
+\midrule
+PHM2012 & Linear Reg. & 0.263 [0.245, 0.281] & 0.201 [0.197, 0.204] & 0.177 [0.086, 0.267] & 0.116 [0.112, 0.121] \\
+PHM2012 & LSTM & 0.256 [0.195, 0.317] & 0.171 [0.129, 0.201] & 0.239 [0.047, 0.431] & 0.096 [0.069, 0.114] \\
+PHM2012 & TCN & 0.209 [0.162, 0.255] & 0.145 [0.134, 0.152] & 0.191 [0.094, 0.287] & 0.117 [0.101, 0.126] \\
+PHM2012 & PatchTST & 0.229 [0.191, 0.268] & 0.137 [0.123, 0.151] & 0.196 [0.034, 0.359] & 0.080 [0.072, 0.088] \\
+\midrule
+IMS & Linear Reg. & 0.427 [0.136, 0.718] & 0.215 [0.212, 0.217] & 0.362 [-0.794, 1.519] & 0.127 [0.126, 0.128] \\
+IMS & LSTM & 0.356 [0.039, 0.672] & 0.183 [0.171, 0.188] & 0.291 [-0.049, 0.631] & 0.104 [0.095, 0.117] \\
+IMS & TCN & 0.435 [0.156, 0.715] & 0.180 [0.167, 0.188] & 0.367 [-0.781, 1.514] & 0.100 [0.092, 0.111] \\
+IMS & PatchTST & 0.382 [0.019, 0.744] & 0.194 [0.184, 0.201] & 0.344 [-0.364, 1.052] & 0.103 [0.093, 0.116] \\
+\bottomrule
+\end{tabular}}
+\end{table*}

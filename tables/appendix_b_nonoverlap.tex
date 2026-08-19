@@ -1,0 +1,25 @@
+\begin{table*}[!ht]
+\centering
+\caption{Per-fold and per-seed evidence for the non-overlap primary protocol comparison. LOOCV range is the min--max of linear-label fold $R^2$; seed columns are piecewise-label random-split $R^2$ for seeds 42--49.}
+\label{tab:perfold_nonoverlap}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllccccccccc}
+\toprule
+Dataset & Model & Linear LOOCV range & S42 & S43 & S44 & S45 & S46 & S47 & S48 & S49 & Protocol gap \\
+\midrule
+XJTU-SY & Linear Reg. & $0.176$ to $0.181$ & 0.447 & 0.414 & 0.429 & 0.364 & 0.400 & 0.416 & 0.399 & 0.375 & 0.228 \\
+XJTU-SY & LSTM & $0.192$ to $0.195$ & 0.073 & 0.353 & 0.447 & 0.164 & 0.322 & 0.443 & 0.428 & 0.253 & 0.117 \\
+XJTU-SY & TCN & $0.188$ to $0.192$ & 0.123 & 0.316 & 0.501 & 0.161 & 0.356 & 0.440 & 0.453 & 0.287 & 0.140 \\
+XJTU-SY & PatchTST & $0.194$ to $0.197$ & 0.075 & 0.338 & 0.462 & 0.168 & 0.315 & 0.431 & 0.457 & 0.269 & 0.118 \\
+PHM2012 & Linear Reg. & $-0.444$ to $0.101$ & 0.376 & 0.396 & 0.420 & 0.435 & 0.426 & 0.465 & 0.424 & 0.385 & 0.584 \\
+PHM2012 & LSTM & $-0.822$ to $0.419$ & 0.606 & 0.477 & 0.567 & 0.600 & 0.364 & 0.372 & 0.357 & 0.806 & 0.637 \\
+PHM2012 & TCN & $-0.245$ to $0.502$ & 0.548 & 0.444 & 0.418 & 0.378 & 0.366 & 0.286 & 0.512 & 0.437 & 0.227 \\
+PHM2012 & PatchTST & $-0.134$ to $0.539$ & 0.790 & 0.573 & 0.709 & 0.681 & 0.511 & 0.509 & 0.628 & 0.734 & 0.583 \\
+IMS & Linear Reg. & $-3.000$ to $-0.452$ & 0.328 & 0.313 & 0.318 & 0.333 & 0.315 & 0.310 & 0.327 & 0.319 & 2.429 \\
+IMS & LSTM & $-2.956$ to $0.022$ & 0.506 & 0.458 & 0.465 & 0.484 & 0.507 & 0.465 & 0.452 & 0.542 & 1.764 \\
+IMS & TCN & $-3.006$ to $-0.685$ & 0.566 & 0.502 & 0.487 & 0.529 & 0.540 & 0.484 & 0.500 & 0.571 & 2.752 \\
+IMS & PatchTST & $-2.741$ to $0.001$ & 0.507 & 0.442 & 0.466 & 0.471 & 0.482 & 0.448 & 0.423 & 0.517 & 2.190 \\
+\bottomrule
+\end{tabular}}
+\end{table*}

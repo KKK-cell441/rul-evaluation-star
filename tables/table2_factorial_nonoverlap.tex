@@ -1,0 +1,28 @@
+\begin{table*}[!ht]
+\centering
+\caption{Complete $2\times2$ non-overlap protocol comparison. Values are mean $R^2$; LOOCV values are means across held-out bearings and random values are means across eight seeds (42--49). Interaction is the descriptive difference-in-differences term defined in Section 4.4.}
+\label{tab:factorial_nonoverlap}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llccccc}
+\toprule
+Dataset & Model & Linear LOOCV & Linear random & Piecewise LOOCV & Piecewise random & Interaction \\
+\midrule
+\midrule
+XJTU-SY & Linear Reg. & 0.178 & 0.165 [0.149, 0.185] & 0.410 & 0.405 [0.364, 0.447] & 0.008 \\
+XJTU-SY & LSTM & 0.193 & 0.117 [0.011, 0.223] & 0.417 & 0.310 [0.073, 0.447] & -0.031 \\
+XJTU-SY & TCN & 0.190 & 0.124 [-0.008, 0.256] & 0.411 & 0.330 [0.123, 0.501] & -0.015 \\
+XJTU-SY & PatchTST & 0.196 & 0.095 [-0.004, 0.212] & 0.416 & 0.314 [0.075, 0.462] & -0.001 \\
+\midrule
+PHM2012 & Linear Reg. & -0.168 & 0.282 [0.256, 0.316] & -0.256 & 0.416 [0.376, 0.465] & 0.221 \\
+PHM2012 & LSTM & -0.119 & 0.455 [0.368, 0.589] & -1.124 & 0.518 [0.357, 0.806] & 1.068 \\
+PHM2012 & TCN & 0.196 & 0.557 [0.525, 0.597] & -0.379 & 0.424 [0.286, 0.548] & 0.442 \\
+PHM2012 & PatchTST & 0.059 & 0.616 [0.543, 0.655] & -0.833 & 0.642 [0.509, 0.790] & 0.917 \\
+\midrule
+IMS & Linear Reg. & -2.109 & 0.218 [0.210, 0.225] & -4.586 & 0.320 [0.310, 0.333] & 2.580 \\
+IMS & LSTM & -1.279 & 0.382 [0.339, 0.433] & -1.039 & 0.485 [0.452, 0.542] & -0.136 \\
+IMS & TCN & -2.230 & 0.395 [0.366, 0.453] & -4.876 & 0.522 [0.484, 0.571] & 2.772 \\
+IMS & PatchTST & -1.721 & 0.331 [0.293, 0.387] & -3.466 & 0.469 [0.423, 0.517] & 1.884 \\
+\bottomrule
+\end{tabular}}
+\end{table*}

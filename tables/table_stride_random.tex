@@ -1,0 +1,34 @@
+\begin{table*}[!ht]
+\centering
+\caption{Random-split history-construction comparison (stride=1 versus stride=10). Values are mean $R^2$, RMSE, and MAE across eight seeds (42--49); $\Delta R^2$ is the stride=10 value minus the stride=1 value. RMSE and MAE are computed on trajectory-normalized RUL.}
+\label{tab:stride_random}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllccccccc}
+\toprule
+Dataset & Label & Model & $R^2_{\mathrm{stride}=1}$ & $R^2_{\mathrm{stride}=10}$ & $\Delta R^2$ & $\mathrm{RMSE}_{\mathrm{stride}=1}$ & $\mathrm{RMSE}_{\mathrm{stride}=10}$ & $\mathrm{MAE}_{\mathrm{stride}=1}$ & $\mathrm{MAE}_{\mathrm{stride}=10}$ \\
+\midrule
+\midrule
+XJTU-SY & Linear & LSTM & 0.223 & 0.117 & -0.106 & 0.254 & 0.267 & 0.243 & 0.254 \\
+XJTU-SY & Linear & TCN & 0.218 & 0.124 & -0.094 & 0.255 & 0.266 & 0.243 & 0.253 \\
+XJTU-SY & Linear & PatchTST & 0.203 & 0.095 & -0.108 & 0.257 & 0.271 & 0.245 & 0.255 \\
+XJTU-SY & Piecewise & LSTM & 0.410 & 0.310 & -0.100 & 0.181 & 0.190 & 0.100 & 0.108 \\
+XJTU-SY & Piecewise & TCN & 0.410 & 0.330 & -0.080 & 0.181 & 0.187 & 0.106 & 0.115 \\
+XJTU-SY & Piecewise & PatchTST & 0.416 & 0.314 & -0.101 & 0.181 & 0.189 & 0.101 & 0.108 \\
+\midrule
+PHM2012 & Linear & LSTM & 0.794 & 0.455 & -0.338 & 0.131 & 0.215 & 0.090 & 0.171 \\
+PHM2012 & Linear & TCN & 0.826 & 0.557 & -0.270 & 0.121 & 0.194 & 0.082 & 0.145 \\
+PHM2012 & Linear & PatchTST & 0.793 & 0.616 & -0.177 & 0.131 & 0.180 & 0.091 & 0.137 \\
+PHM2012 & Piecewise & LSTM & 0.785 & 0.518 & -0.266 & 0.108 & 0.168 & 0.053 & 0.096 \\
+PHM2012 & Piecewise & TCN & 0.843 & 0.424 & -0.419 & 0.092 & 0.186 & 0.047 & 0.117 \\
+PHM2012 & Piecewise & PatchTST & 0.823 & 0.642 & -0.181 & 0.099 & 0.145 & 0.047 & 0.080 \\
+\midrule
+IMS & Linear & LSTM & 0.585 & 0.382 & -0.204 & 0.186 & 0.228 & 0.138 & 0.183 \\
+IMS & Linear & TCN & 0.602 & 0.395 & -0.207 & 0.182 & 0.225 & 0.136 & 0.180 \\
+IMS & Linear & PatchTST & 0.536 & 0.331 & -0.205 & 0.197 & 0.237 & 0.150 & 0.194 \\
+IMS & Piecewise & LSTM & 0.692 & 0.485 & -0.207 & 0.132 & 0.171 & 0.064 & 0.104 \\
+IMS & Piecewise & TCN & 0.710 & 0.522 & -0.188 & 0.128 & 0.164 & 0.066 & 0.100 \\
+IMS & Piecewise & PatchTST & 0.659 & 0.469 & -0.190 & 0.139 & 0.173 & 0.072 & 0.103 \\
+\bottomrule
+\end{tabular}}
+\end{table*}

@@ -1,0 +1,24 @@
+\begin{table}[!ht]
+\centering
+\caption{TCN split sensitivity with non-overlap and piecewise labels. Random rows are mean [min--max] over seeds 42, 43, 44; time-block uses chronological 70/15/15 per bearing.}
+\label{tab:sensitivity_nonoverlap}
+\small
+\begin{tabular}{llc}
+\toprule
+Dataset & Split & $R^2$ \\
+\midrule
+\midrule
+XJTU-SY & Random 60/20/20 & 0.251 [0.106, 0.375] \\
+XJTU-SY & Random 80/10/10 & 0.310 [0.043, 0.523] \\
+XJTU-SY & Time-block 70/15/15 & -6.689 [-6.689, -6.689] \\
+\midrule
+PHM2012 & Random 60/20/20 & 0.435 [0.374, 0.471] \\
+PHM2012 & Random 80/10/10 & 0.385 [0.337, 0.429] \\
+PHM2012 & Time-block 70/15/15 & -6.883 [-6.883, -6.883] \\
+\midrule
+IMS & Random 60/20/20 & 0.502 [0.464, 0.552] \\
+IMS & Random 80/10/10 & 0.508 [0.493, 0.526] \\
+IMS & Time-block 70/15/15 & -7.650 [-7.650, -7.650] \\
+\bottomrule
+\end{tabular}
+\end{table}
