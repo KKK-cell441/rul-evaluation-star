@@ -48,7 +48,7 @@
 - [x] `figures/graphical_abstract.pdf`
 - [x] `Zenodo_Upload_Checklist.md`
 
-## Remaining Before Submission
+## Remaining Before Any Future JIM Submission
 
 - [ ] Confirm ORCID and author details in the online submission system.
 - [ ] Confirm JIM submission-portal requirements for Highlights and any graphical abstract.
@@ -62,4 +62,4 @@
 
 ## JIM-Specific Note
 
-JIM is a Springer journal. The manuscript has been converted to the Springer `sn-jnl` template; `manuscript_revised_v18_jim.pdf` is the current submission candidate.
+JIM is a Springer journal. The manuscript has been converted to the Springer `sn-jnl` template; `manuscript_revised_v18_jim.pdf` is a prepared JIM-format version. As of 2026-09-25, it has not been submitted to JIM.

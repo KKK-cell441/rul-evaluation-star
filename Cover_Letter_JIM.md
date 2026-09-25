@@ -1,5 +1,7 @@
 # Cover Letter (Journal of Intelligent Manufacturing)
 
+**Draft only. This manuscript has not been submitted to the Journal of Intelligent Manufacturing.**
+
 Dear Editor,
 
 We are submitting our manuscript entitled:

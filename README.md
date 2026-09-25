@@ -11,10 +11,10 @@ The package reproduces the benchmark experiments reported in the manuscript; it 
 ## Contents
 
 - `reproducibility/` contains preprocessing scripts, converged training and split-sensitivity runners, result JSON files, and table/figure generators.
-- `manuscript_revised_v18_jim.pdf` is the latest Springer/JIM submission candidate.
+- `manuscript_revised_v18_jim.pdf` is a prepared Springer/JIM-format version. It has not been submitted to JIM.
 - `manuscript_revised_v7.pdf` remains the Elsevier source version.
 - `figures/` contains the figures used in the manuscript.
-- `figures/graphical_abstract.png` and `graphical_abstract.pdf` are provided for the JIM submission package.
+- `figures/graphical_abstract.png` and `graphical_abstract.pdf` are provided for the prepared JIM-format package; no JIM submission has been made.
 - `Zenodo_Upload_Checklist.md` lists the files and metadata for the v18 Zenodo release.
 - Zenodo DOI: https://doi.org/10.5281/zenodo.21887653
 
